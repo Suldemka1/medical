@@ -26,14 +26,14 @@ const BlogStandard = () => {
                   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
                     if (index % 2 === 0) {
                       return (
-                        <PostCard variant={"default"} />
+                        <PostCard key={index} variant={"default"} />
                       )
                     }
                     else if (index % 5 === 0) {
-                      return <PostCard variant={"dark"} />
+                      return <PostCard key={index} variant={"dark"} />
                     }
                     else {
-                      return <PostCard variant={"no-thumbnail"} />
+                      return <PostCard key={index} variant={"no-thumbnail"} />
                     }
                   })
                 }

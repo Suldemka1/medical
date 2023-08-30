@@ -32,7 +32,7 @@ const Faq = () => {
                   {
                     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item, index) => {
                       return (
-                        <div className={`accordion-item ${active_(index)}`}>
+                        <div key={index} className={`accordion-item ${active_(index)}`}>
                           <div className="accordion-header">
                             <Accordion.Toggle
                               as="h6"

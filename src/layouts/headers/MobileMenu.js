@@ -16,7 +16,7 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
       <div className="panel-overlay" onClick={() => setMobileTrigger()} />
       <div className="panel-inner">
         <div className="panel-logo">
-          <h1>ГБУЗ РТ "Инфекционная больница"</h1>
+          <h1>ГБУЗ РТ &quot;Инфекционная больница&quot;</h1>
 
           {/* <img src="assets/img/logo.png" alt="" /> */}
         </div>

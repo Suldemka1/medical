@@ -3,88 +3,15 @@ import React, { useState } from "react";
 import { Accordion } from "react-bootstrap";
 import PageBanner from "../src/components/PageBanner";
 import Layouts from "../src/layouts/Layouts";
+import { AboutAd } from "../src/shared";
+import { DoctorCardS } from "../src/entities";
 
 const About = () => {
   const [toggle, setToggle] = useState(1);
   return (
     <Layouts footer={2}>
-      <PageBanner title={"About"} />
-      <section className="about-section section-gap">
-        <div className="container">
-          <div className="row justify-content-lg-between justify-content-center align-items-center">
-            <div className="col-lg-6 col-md-10">
-              <div className="circle-image-gallery mb-md-50">
-                <div className="row">
-                  <div className="col-6 gallery-left">
-                    <div
-                      className="single-img wow fadeInLeft"
-                      data-wow-delay="0.3s"
-                    >
-                      <img
-                        src="assets/img/circle-image-gallery/01.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div
-                      className="single-img wow fadeInRight"
-                      data-wow-delay="0.4s"
-                    >
-                      <img
-                        src="assets/img/circle-image-gallery/04.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="col-6 gallery-right">
-                    <div
-                      className="single-img wow fadeInRight"
-                      data-wow-delay="0.5s"
-                    >
-                      <img
-                        className="animate-float-bob-y"
-                        src="assets/img/circle-image-gallery/03.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div
-                      className="single-img wow fadeInLeft"
-                      data-wow-delay="0.6s"
-                    >
-                      <img
-                        src="assets/img/circle-image-gallery/02.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-5 col-lg-6 col-md-8">
-              <div className="about-text">
-                <div className="section-heading mb-35">
-                  <span className="tagline">About Seeva</span>
-                  <h2 className="title">All-in-One Worksite Health Solution</h2>
-
-                  <p>25 Years Of Experience in Medical Services</p>
-                </div>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error voluptatem
-                  accusantium doloremque laudantium totam rem aperieaque ipsa
-                  quae ab illo inventore veritatis et quasi architecto beatae
-                  vitae dicta sunt explicabo. Nemo enim ipsam voluptatemsy quia
-                  voluptas sit aspernatur aut odit aut fugit quia conquntur
-                  magni dolores eos qui ratione voluptatem
-                </p>
-                <Link href="/about">
-                  <a className="template-btn mt-40">
-                    Learn More <i className="far fa-plus"></i>
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner title={"О больнице"} />
+      <AboutAd />
       {/* <!--====== About Section End ======--> */}
 
       <div className="wcu-with-doctors">
@@ -156,189 +83,25 @@ const About = () => {
         {/* <!--====== Why Choose Section End ======--> */}
 
         {/* <!--====== Doctor Section Start ======--> */}
+
         <section className="doctors-section bg-color-grey polygon-pattern-2">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-6 col-md-6">
                 <div className="section-heading text-center mb-40">
-                  <span className="tagline">Professional Team</span>
-                  <h2 className="title">Meet Our Experience Team Members</h2>
+                  <span className="tagline">Команда профессионалов</span>
+                  <h2 className="title">Врачи, известные на всю республику и не только</h2>
                 </div>
               </div>
             </div>
             <div className="row justify-content-center doctors-loop">
-              <div className="col-xl-3 col-lg-4 col-sm-6">
-                <div
-                  className="doctor-box-three mt-30 wow fadeInUp"
-                  data-wow-delay="0.3s"
-                >
-                  <div className="doctor-photo">
-                    <img src="assets/img/doctors/18.jpg" alt="Image" />
-                  </div>
-                  <div className="doctor-information">
-                    <h5 className="name">
-                      <Link href="/doctor-details">
-                        <a>Allan K. Simons</a>
-                      </Link>
-                    </h5>
-                    <span className="specialty">Dental Specialist</span>
-                    <ul className="social-links">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-youtube"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-icon">
-                      <i className="far fa-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-4 col-sm-6">
-                <div
-                  className="doctor-box-three mt-30 wow fadeInUp"
-                  data-wow-delay="0.4s"
-                >
-                  <div className="doctor-photo">
-                    <img src="assets/img/doctors/19.jpg" alt="Image" />
-                  </div>
-                  <div className="doctor-information">
-                    <h5 className="name">
-                      <Link href="/doctor-details">
-                        <a>Marcus K. Staton</a>
-                      </Link>
-                    </h5>
-                    <span className="specialty">Neurology</span>
-                    <ul className="social-links">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-youtube"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-icon">
-                      <i className="far fa-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-4 col-sm-6">
-                <div
-                  className="doctor-box-three mt-30 wow fadeInUp"
-                  data-wow-delay="0.5s"
-                >
-                  <div className="doctor-photo">
-                    <img src="assets/img/doctors/20.jpg" alt="Image" />
-                  </div>
-                  <div className="doctor-information">
-                    <h5 className="name">
-                      <Link href="/doctor-details">
-                        <a>Travis A. Costillo</a>
-                      </Link>
-                    </h5>
-                    <span className="specialty">Orthopedics</span>
-                    <ul className="social-links">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-youtube"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-icon">
-                      <i className="far fa-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-4 col-sm-6">
-                <div
-                  className="doctor-box-three mt-30 wow fadeInUp"
-                  data-wow-delay="0.6s"
-                >
-                  <div className="doctor-photo">
-                    <img src="assets/img/doctors/21.jpg" alt="Image" />
-                  </div>
-                  <div className="doctor-information">
-                    <h5 className="name">
-                      <Link href="/doctor-details">
-                        <a>M.Calhoun</a>
-                      </Link>
-                    </h5>
-                    <span className="specialty">Cardiology</span>
-                    <ul className="social-links">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-youtube"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin"></i>
-                        </a>
-                      </li>
-                    </ul>
-                    <span className="plus-icon">
-                      <i className="far fa-plus"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
+              {
+                [0, 1, 2, 3, 4, 5].map((item, index) => {
+                  return (
+                    <DoctorCardS />
+                  )
+                })
+              }
             </div>
           </div>
         </section>

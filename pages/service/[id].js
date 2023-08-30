@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import PageBanner from "../src/components/PageBanner";
-import Layouts from "../src/layouts/Layouts";
+import PageBanner from "../../src/components/PageBanner";
+import Layouts from "../../src/layouts/Layouts";
 
 const ServiceDetails = () => {
   return (
     <Layouts footer={2}>
-      <PageBanner title={"Service Details"} />
+      <PageBanner title={"Название услуги"} />
       <>
         <section className="services-area section-gap">
           <div className="container">
@@ -15,7 +15,7 @@ const ServiceDetails = () => {
                 <div className="service-details-wrapper">
                   <div className="service-thumbnail mb-50">
                     <img
-                      src="assets/img/service/service-details-1.jpg"
+                      src="../assets/img/service/service-details-1.jpg"
                       alt="Image"
                     />
                   </div>
@@ -44,7 +44,7 @@ const ServiceDetails = () => {
                   </blockquote>
                   <div className="mb-50 mt-50">
                     <img
-                      src="assets/img/service/service-details-2.jpg"
+                      src="../assets/img/service/service-details-2.jpg"
                       alt="Image"
                     />
                   </div>
@@ -73,7 +73,7 @@ const ServiceDetails = () => {
               <div className="col-lg-4 col-md-10 order-lg-first">
                 <div className="service-sidebar">
                   <div className="widget departments-list">
-                    <h3 className="widget-title">Departments</h3>
+                    <h3 className="widget-title">Отделения</h3>
                     <ul>
                       <li>
                         <a href="#">
@@ -125,7 +125,7 @@ const ServiceDetails = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className="widget appointment-form">
+                  {/* <div className="widget appointment-form">
                     <h3 className="widget-title">Appointment</h3>
                     <p>
                       Consectetur adipiscing elit sed do eiusmod tempor
@@ -150,9 +150,9 @@ const ServiceDetails = () => {
                         </button>
                       </div>
                     </form>
-                  </div>
+                  </div> */}
                   <div className="widget working-schedule">
-                    <h3 className="widget-title">Working Hour</h3>
+                    <h3 className="widget-title">График приема</h3>
                     <ul>
                       <li>
                         <span>
@@ -217,9 +217,9 @@ const ServiceDetails = () => {
             <div className="row justify-content-center">
               <div className="col-lg-7 col-md-10">
                 <div className="section-heading text-center mb-40">
-                  <span className="tagline">Popular Medical Services</span>
+                  <span className="tagline">Популярные услуги</span>
                   <h2 className="title">
-                    Benefit For Physical Mental and Virtual Care
+                    Пособие по физическому, психическому и виртуальному уходу
                   </h2>
                 </div>
               </div>
@@ -228,10 +228,10 @@ const ServiceDetails = () => {
               <div className="col-lg-4 col-md-6 col-sm-8">
                 <div className="iconic-box mt-30">
                   <div className="icon">
-                    <img src="assets/img/icon/heart.png" alt="Icon" />
+                    <img src="../assets/img/icon/heart.png" alt="Icon" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Cardiology</Link>
+                    <Link href="/service/1">Cardiology</Link>
                   </h4>
                   <p>
                     Dolor sit amet consectetur ascing elitsed eiusmod tempor
@@ -240,7 +240,7 @@ const ServiceDetails = () => {
                     <span className="link-icon">
                       <i className="far fa-plus" />
                     </span>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-link">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -251,10 +251,10 @@ const ServiceDetails = () => {
               <div className="col-lg-4 col-md-6 col-sm-8">
                 <div className="iconic-box mt-30">
                   <div className="icon">
-                    <img src="assets/img/icon/lungs.png" alt="Icon" />
+                    <img src="../assets/img/icon/lungs.png" alt="Icon" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Pulmonary</Link>
+                    <Link href="/service/1">Pulmonary</Link>
                   </h4>
                   <p>
                     Dolor sit amet consectetur ascing elitsed eiusmod tempor
@@ -263,7 +263,7 @@ const ServiceDetails = () => {
                     <span className="link-icon">
                       <i className="far fa-plus" />
                     </span>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-link">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -274,10 +274,10 @@ const ServiceDetails = () => {
               <div className="col-lg-4 col-md-6 col-sm-8">
                 <div className="iconic-box mt-30">
                   <div className="icon">
-                    <img src="assets/img/icon/brain.png" alt="Icon" />
+                    <img src="../assets/img/icon/brain.png" alt="Icon" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Neurology</Link>
+                    <Link href="/service/1">Neurology</Link>
                   </h4>
                   <p>
                     Dolor sit amet consectetur ascing elitsed eiusmod tempor
@@ -286,7 +286,7 @@ const ServiceDetails = () => {
                     <span className="link-icon">
                       <i className="far fa-plus" />
                     </span>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-link">
                         Read More <i className="far fa-plus" />
                       </a>

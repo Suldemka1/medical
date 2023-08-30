@@ -23,13 +23,13 @@ export const Home = () => (
 export const Pages = () => (
   <Fragment>
     <li>
-      <Link href="/pricing">Pricing Plan</Link>
+      <Link href="/pricing">Платные медицинские услуги</Link>
     </li>
     <li>
       <Link href="/faq">Help &amp; FAQ</Link>
     </li>
     <li>
-      <Link href="/gallery">Our Gallery</Link>
+      <Link href="/gallery">Галерея</Link>
     </li>
     <li>
       <Link href="/appointments">Appointment</Link>
@@ -45,7 +45,7 @@ export const Services = () => (
       <Link href="/service-two">Service Two</Link>
     </li>
     <li>
-      <Link href="/service-details">Service Details</Link>
+      <Link href="/service/1">Service Details</Link>
     </li>
   </Fragment>
 );
@@ -55,17 +55,17 @@ export const Doctor = () => (
       <Link href="/doctor">Doctor</Link>
     </li>
     <li>
-      <Link href="/doctor-details">Doctor Details</Link>
+      <Link href="/doctor/1">Doctor Details</Link>
     </li>
   </Fragment>
 );
 export const Blog = () => (
   <Fragment>
     <li>
-      <Link href="/blog-standard">Blog Standard</Link>
+      <Link href="/blog">Blog Standard</Link>
     </li>
     <li>
-      <Link href="/blog-details">Blog Details</Link>
+      <Link href="/blog/1">Blog Details</Link>
     </li>
   </Fragment>
 );

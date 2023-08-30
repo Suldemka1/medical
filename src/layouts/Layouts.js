@@ -13,6 +13,7 @@ const Layouts = ({
   noheader,
   noFooter,
 }) => {
+  
   useEffect(() => {
     animation();
     niceSelect();

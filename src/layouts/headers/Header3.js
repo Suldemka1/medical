@@ -105,7 +105,7 @@ const Header3 = () => {
                 <li>
                   <Link href="/doctors">
                     <a>
-                      Doctors
+                      Наши Врачи
                       <span className="dd-trigger">
                         <i className="far fa-plus" />
                       </span>
@@ -116,7 +116,7 @@ const Header3 = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link href="/blog-standard">
+                  <Link href="/blog">
                     <a>
                       Blog
                       <span className="dd-trigger">

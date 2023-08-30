@@ -14,7 +14,7 @@ const PageBanner = ({ bgnone, pageName, title }) => {
         <h1 className="page-title">{title}</h1>
         <ul className="breadcrumb-nav">
           <li>
-            <a href="#">Home</a>
+            <a href="#">Главная</a>
           </li>
           <li>
             <i className="fas fa-angle-right" />

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import PageBanner from "../src/components/PageBanner";
-import Layouts from "../src/layouts/Layouts";
+import PageBanner from "../../src/components/PageBanner";
+import Layouts from "../../src/layouts/Layouts";
 
 const DoctorDetails = () => {
   return (
@@ -322,7 +322,7 @@ const DoctorDetails = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Cardiology</a>
                       </Link>
                     </h4>
@@ -342,7 +342,7 @@ const DoctorDetails = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Neurology</a>
                       </Link>
                     </h4>
@@ -362,7 +362,7 @@ const DoctorDetails = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Orthopedics</a>
                       </Link>
                     </h4>

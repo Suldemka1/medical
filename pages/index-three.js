@@ -158,7 +158,7 @@ const Index3 = () => {
                           </div>
                           <div className="content">
                             <h4 className="title">
-                              <Link href="/service-details">
+                              <Link href="/service/1">
                                 <a>Cardiology</a>
                               </Link>
                             </h4>
@@ -178,7 +178,7 @@ const Index3 = () => {
                           </div>
                           <div className="content">
                             <h4 className="title">
-                              <Link href="/service-details">
+                              <Link href="/service/1">
                                 <a>Neurology</a>
                               </Link>
                             </h4>
@@ -198,7 +198,7 @@ const Index3 = () => {
                           </div>
                           <div className="content">
                             <h4 className="title">
-                              <Link href="/service-details">
+                              <Link href="/service/1">
                                 <a>Orthopedics</a>
                               </Link>
                             </h4>
@@ -218,7 +218,7 @@ const Index3 = () => {
                           </div>
                           <div className="content">
                             <h4 className="title">
-                              <Link href="/service-details">
+                              <Link href="/service/1">
                                 <a>Covid 19</a>
                               </Link>
                             </h4>
@@ -488,7 +488,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Lee S. Williamson</a>
                         </Link>
                       </h5>
@@ -525,7 +525,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Greg S. Grinstead</a>
                         </Link>
                       </h5>
@@ -562,7 +562,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Roger K. Jackson</a>
                         </Link>
                       </h5>
@@ -599,7 +599,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Rudolph V. Spitler</a>
                         </Link>
                       </h5>
@@ -636,7 +636,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Frank T. Grimsley</a>
                         </Link>
                       </h5>
@@ -673,7 +673,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Johnny R. Atterberry</a>
                         </Link>
                       </h5>
@@ -710,7 +710,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Erik R. Faulkner</a>
                         </Link>
                       </h5>
@@ -747,7 +747,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Phillip L. Williams</a>
                         </Link>
                       </h5>
@@ -784,7 +784,7 @@ const Index3 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Michael I. Johnson</a>
                         </Link>
                       </h5>
@@ -1064,7 +1064,7 @@ const Index3 = () => {
                       </a>
                     </div>
                     <h4 className="post-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>
                           Comprehensive Worksite Health Program Built Decades of
                           Clinical Expertise
@@ -1085,7 +1085,7 @@ const Index3 = () => {
                       </a>
                     </div>
                     <h4 className="post-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>
                           Make Ove Toward Improved Employee Health Speed Return
                           Healthcare Investment
@@ -1106,7 +1106,7 @@ const Index3 = () => {
                       </a>
                     </div>
                     <h4 className="post-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>
                           Flexible and Responsive to Your Changing Seen
                           Needs&nbsp;Make Ove Toward Improved

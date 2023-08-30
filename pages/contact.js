@@ -5,7 +5,7 @@ import Layouts from "../src/layouts/Layouts";
 const Contact = () => {
   return (
     <Layouts footer={2}>
-      <PageBanner title={"Contact Us"} />
+      <PageBanner title={"Контакты"} />
       {/*====== Page Title End ======*/}
       {/*====== Contact Info Section Start ======*/}
       <section className="section-gap contact-top-wrappper">
@@ -16,7 +16,7 @@ const Contact = () => {
                 <div className="single-contact-info">
                   <div className="single-contact-info">
                     <h3 className="info-title">
-                      <i className="fal fa-map-marker-alt" /> Address
+                      <i className="fal fa-map-marker-alt" /> Адрес
                     </h3>
                     <p>
                       7895 Piermont Dr NE Albuquerque, <br />
@@ -25,26 +25,26 @@ const Contact = () => {
                   </div>
                   <div className="single-contact-info">
                     <h3 className="info-title">
-                      <i className="fal fa-coffee" /> Get In Touch
+                      <i className="fal fa-coffee" /> Контактные данные
                     </h3>
                     <ul>
                       <li>
-                        <span>Phone Number</span>
-                        <a href="tel:+012020200">+012 (345) 6789</a>
+                        <span>Телефон</span>
+                        <a href="tel:+012020200">+7 (39422) 6789</a>
                       </li>
                       <li>
-                        <span>Email Address</span>
+                        <span>Электронная почта</span>
                         <a href="mailto:support@gmail.com">support@gmail.com</a>
                       </li>
                       <li>
-                        <span>Hotline</span>
-                        <a href="tel:+12345678">12345678</a>
+                        <span>Горячая линия</span>
+                        <a href="tel:+12345678">+7 (39422) 6789</a>
                       </li>
                     </ul>
                   </div>
                   <div className="single-contact-info">
                     <h3 className="info-title">
-                      <i className="fal fa-comments" /> Follow Us
+                      <i className="fal fa-comments" /> Социальные сети
                     </h3>
                     <p>
                       Sit amet consectetur adipiscing elit sed do eiusmod tempor
@@ -70,54 +70,54 @@ const Contact = () => {
             </div>
             <div className="col-xl-5 col-lg-6 col-md-10">
               <div className="working-hour-chart">
-                <h2 className="chart-title">Working Hour</h2>
+                <h2 className="chart-title">График</h2>
                 <ul>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Monday
+                      Понедельник
                     </span>
                     <span>9:00-19:00</span>
                   </li>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Tuesday
+                      Вторник
                     </span>
                     <span>9:00-19:00</span>
                   </li>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Wednesday
+                      Среда
                     </span>
                     <span>9:00-19:00</span>
                   </li>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Thursday
+                      Четверг
                     </span>
                     <span>9:00-19:00</span>
                   </li>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Friday
+                      Пятница
                     </span>
                     <span>9:00-19:00</span>
                   </li>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Saturday
+                      Суббота
                     </span>
                     <span>9:00-19:00</span>
                   </li>
                   <li>
                     <span>
                       <i className="far fa-angle-right" />
-                      Sunday
+                      Воскресенье
                     </span>
                     <span>9:00-19:00</span>
                   </li>
@@ -136,7 +136,7 @@ const Contact = () => {
             loading="lazy"
           />
         </div>
-        <div className="section-gap">
+        {/* <div className="section-gap">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-10">
@@ -212,7 +212,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
     </Layouts>
   );

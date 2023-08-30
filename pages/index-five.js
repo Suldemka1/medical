@@ -2381,7 +2381,7 @@ const Index5 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Comprehensive Worksire Health Progranm Built</a>
                       </Link>
                     </h4>
@@ -2389,7 +2389,7 @@ const Index5 = () => {
                       Sed perspiciatis unde omnis natus error voluptatem
                       accusantium dolore mque laudantium totam rem
                     </p>
-                    <Link href="/blog-details">
+                    <Link href="/blog/1">
                       <a className="template-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -2412,7 +2412,7 @@ const Index5 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Front-End Performance Checklist 2021 PDF</a>
                       </Link>
                     </h4>
@@ -2420,7 +2420,7 @@ const Index5 = () => {
                       Sed perspiciatis unde omnis natus error voluptatem
                       accusantium dolore mque laudantium totam rem
                     </p>
-                    <Link href="/blog-details">
+                    <Link href="/blog/1">
                       <a className="template-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -2443,7 +2443,7 @@ const Index5 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>DevTools Debugging Tips Shortcut Chrome Fire</a>
                       </Link>
                     </h4>
@@ -2451,7 +2451,7 @@ const Index5 = () => {
                       Sed perspiciatis unde omnis natus error voluptatem
                       accusantium dolore mque laudantium totam rem
                     </p>
-                    <Link href="/blog-details">
+                    <Link href="/blog/1">
                       <a className="template-btn">
                         Read More <i className="far fa-plus" />
                       </a>

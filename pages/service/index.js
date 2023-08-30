@@ -1,14 +1,14 @@
 import Link from "next/link";
 import React from "react";
-import PageBanner from "../src/components/PageBanner";
-import ChooseDoctor from "../src/components/select/ChooseDoctor";
-import ServicesCategory from "../src/components/select/ServicesCategory";
-import Layouts from "../src/layouts/Layouts";
+import PageBanner from "../../src/components/PageBanner";
+import ChooseDoctor from "../../src/components/select/ChooseDoctor";
+import ServicesCategory from "../../src/components/select/ServicesCategory";
+import Layouts from "../../src/layouts/Layouts";
 
 const Service = () => {
   return (
     <Layouts footer={2}>
-      <PageBanner title={"Our Services"} pageName="Services" />
+      <PageBanner title={"Услуги"} pageName="Услуги" />
       <section className="services-area section-gap-top-less bg-color-grey">
         <div className="container">
           <div className="row justify-content-center service-loop">
@@ -23,7 +23,7 @@ const Service = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Cardiology</a>
                       </Link>
                     </h4>
@@ -43,7 +43,7 @@ const Service = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Neurology</a>
                       </Link>
                     </h4>
@@ -63,7 +63,7 @@ const Service = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Orthopedics</a>
                       </Link>
                     </h4>
@@ -83,7 +83,7 @@ const Service = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Covid 19</a>
                       </Link>
                     </h4>
@@ -103,7 +103,7 @@ const Service = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Orthopedics</a>
                       </Link>
                     </h4>
@@ -123,7 +123,7 @@ const Service = () => {
                   </div>
                   <div className="content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Pulmonary</a>
                       </Link>
                     </h4>

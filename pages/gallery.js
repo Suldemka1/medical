@@ -9,7 +9,7 @@ const GalleryIsotop = dynamic(() => import("../src/components/GalleryIsotop"), {
 const Gallery = () => {
   return (
     <Layouts footer={2}>
-      <PageBanner title={"Our Gallery"} bgnone pageName={"Gallery"} />
+      <PageBanner title={"Галерея"} bgnone pageName={"Галерея"} />
       <GalleryIsotop />
     </Layouts>
   );

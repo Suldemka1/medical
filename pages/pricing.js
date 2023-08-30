@@ -5,7 +5,7 @@ import Layouts from "../src/layouts/Layouts";
 const Pricing = () => {
   return (
     <Layouts>
-      <PageBanner title={"Pricing & Plan"} bgnone />
+      <PageBanner title={"Платные медицинские услуги"} bgnone />
       <section className="pricing-section section-gap">
         <div className="container">
           <div className="row justify-content-center mb-40">

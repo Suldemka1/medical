@@ -120,7 +120,7 @@ const Header5 = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link href="blog-standard">
+                  <Link href="blog">
                     <a>
                       Blog
                       <span className="dd-trigger">

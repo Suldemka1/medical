@@ -192,7 +192,7 @@ const Index4 = () => {
                     eaque ipsa quae abillo inventore veritatis et quasi
                     architecto beatae vitae dicta sunt explicabo.
                   </p>
-                  <Link href="/doctor-details">
+                  <Link href="/doctor/1">
                     <a
                       className="template-btn mt-40 wow fadeInUp"
                       data-wow-delay="0.3s"
@@ -401,7 +401,7 @@ const Index4 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Allan K. Simons</a>
                         </Link>
                       </h5>
@@ -444,7 +444,7 @@ const Index4 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Marcus K. Staton</a>
                         </Link>
                       </h5>
@@ -487,7 +487,7 @@ const Index4 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Travis A. Costillo</a>
                         </Link>
                       </h5>
@@ -530,7 +530,7 @@ const Index4 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>M.Calhoun</a>
                         </Link>
                       </h5>
@@ -719,7 +719,7 @@ const Index4 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Comprehensive Worksire Health Progranm Built</a>
                       </Link>
                     </h4>
@@ -727,7 +727,7 @@ const Index4 = () => {
                       Sed perspiciatis unde omnis natus error voluptatem
                       accusantium dolore mque laudantium totam rem
                     </p>
-                    <Link href="/blog-details">
+                    <Link href="/blog/1">
                       <a className="template-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -750,7 +750,7 @@ const Index4 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Front-End Performance Checklist 2021 PDF</a>
                       </Link>
                     </h4>
@@ -758,7 +758,7 @@ const Index4 = () => {
                       Sed perspiciatis unde omnis natus error voluptatem
                       accusantium dolore mque laudantium totam rem
                     </p>
-                    <Link href="/blog-details">
+                    <Link href="/blog/1">
                       <a className="template-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -781,7 +781,7 @@ const Index4 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>DevTools Debugging Tips Shortcut Chrome Fire</a>
                       </Link>
                     </h4>
@@ -789,7 +789,7 @@ const Index4 = () => {
                       Sed perspiciatis unde omnis natus error voluptatem
                       accusantium dolore mque laudantium totam rem
                     </p>
-                    <Link href="/blog-details">
+                    <Link href="/blog/1">
                       <a className="template-btn">
                         Read More <i className="far fa-plus" />
                       </a>

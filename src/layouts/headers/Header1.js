@@ -9,9 +9,8 @@ const Header1 = ({ headerTopbar, position }) => {
   const [mobileTrigger, setMobileTrigger] = useState(false);
   return (
     <header
-      className={`template-header sticky-header header-one ${
-        position ? position + "-header" : ""
-      }`}
+      className={`template-header sticky-header header-one ${position ? position + "-header" : ""
+        }`}
     >
       {headerTopbar && (
         <div className="header-topbar d-none d-md-block">
@@ -23,10 +22,10 @@ const Header1 = ({ headerTopbar, position }) => {
                     <Link href="/faq">ЧАВО</Link>
                   </li>
                   <li>
-                    <Link href="/gallery">Галлерея</Link>
+                    <Link href="/gallery">Галерея</Link>
                   </li>
                   <li>
-                    <Link href="/about">О нас</Link>
+                    <Link href="/about">О больнице</Link>
                   </li>
                 </ul>
               </div>
@@ -71,7 +70,9 @@ const Header1 = ({ headerTopbar, position }) => {
           <div className="header-left">
             <div className="site-logo">
               <Link href="/">
-                <img src="assets/img/logo.png" alt="Seeva" />
+                <h2>ГБУЗ РТ "Инфекционная больница"</h2>
+
+                {/* <img src="assets/img/logo.png" alt="Seeva" /> */}
               </Link>
             </div>
             <nav className="site-menu menu-gap-left d-none d-xl-block">
@@ -79,7 +80,7 @@ const Header1 = ({ headerTopbar, position }) => {
                 <li>
                   <Link href="/">
                     <a>
-                      Home
+                      Главная
                       <span className="dd-trigger">
                         <i className="far fa-plus" />
                       </span>
@@ -89,21 +90,28 @@ const Header1 = ({ headerTopbar, position }) => {
                     <Home />
                   </ul>
                 </li>
-                <li>
-                  <Link href="about">About</Link>
-                </li>
+                {/* <li>
+                  <Link href="about">О больнице</Link>
+                </li> */}
                 <li>
                   <a href="#">
-                    Pages
-                    <span className="dd-trigger">
+                    О больнице
+                    {/* <span className="dd-trigger">
                       <i className="far fa-plus" />
-                    </span>
+                    </span> */}
                   </a>
                   <ul className="sub-menu">
                     <li>
+                      <Link href="about">
+                        <a>
+                          Краткая характеристика
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="service">
                         <a>
-                          Services
+                          Услуги
                           <span className="dd-trigger">
                             <i className="far fa-plus" />
                           </span>
@@ -119,30 +127,30 @@ const Header1 = ({ headerTopbar, position }) => {
                 <li>
                   <Link href="/doctor">
                     <a>
-                      Doctors
-                      <span className="dd-trigger">
+                      Наши врачи
+                      {/* <span className="dd-trigger">
                         <i className="far fa-plus" />
-                      </span>
+                      </span> */}
                     </a>
                   </Link>
-                  <ul className="sub-menu">
+                  {/* <ul className="sub-menu">
                     <Doctor />
-                  </ul>
+                  </ul> */}
                 </li>
                 <li>
-                  <Link href="blog-standard">
+                  <Link href="blog">
                     <a>
-                      Blog
-                      <span className="dd-trigger">
+                      Блог
+                      {/* <span className="dd-trigger">
                         <i className="far fa-plus" />
-                      </span>
+                      </span> */}
                     </a>
                   </Link>
-                  <ul className="sub-menu">
+                  {/* <ul className="sub-menu">
                     <Blog />
-                  </ul>
+                  </ul> */}
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/shop">
                     <a>
                       Shop
@@ -154,9 +162,9 @@ const Header1 = ({ headerTopbar, position }) => {
                   <ul className="sub-menu">
                     <Shop />
                   </ul>
-                </li>
+                </li> */}
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact">Контакты</Link>
                 </li>
               </ul>
             </nav>
@@ -166,7 +174,7 @@ const Header1 = ({ headerTopbar, position }) => {
               <li className="d-none d-sm-block">
                 <div className="header-search-area">
                   <form onSubmit={(e) => e.preventDefault()} action="#">
-                    <input type="search" placeholder="Search Here" />
+                    <input type="search" placeholder="Поиск" />
                     <button type="submit">
                       <i className="far fa-search" />
                     </button>

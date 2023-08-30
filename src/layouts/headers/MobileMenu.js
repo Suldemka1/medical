@@ -5,25 +5,26 @@ import { Blog, Doctor, Home, Pages, Services, Shop } from "./Menu";
 const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
   const [activeMenu, setActiveMenu] = useState("");
   const activeMenuSet = (value) =>
-      setActiveMenu(activeMenu === value ? "" : value),
+    setActiveMenu(activeMenu === value ? "" : value),
     activeLi = (value) =>
       value === activeMenu ? { display: "block" } : { display: "none" };
   return (
     <div
-      className={`slide-panel mobile-slide-panel ${
-        mobileTrigger ? "show-panel" : ""
-      }`}
+      className={`slide-panel mobile-slide-panel ${mobileTrigger ? "show-panel" : ""
+        }`}
     >
       <div className="panel-overlay" onClick={() => setMobileTrigger()} />
       <div className="panel-inner">
         <div className="panel-logo">
-          <img src="assets/img/logo.png" alt="" />
+          <h1>ГБУЗ РТ "Инфекционная больница"</h1>
+
+          {/* <img src="assets/img/logo.png" alt="" /> */}
         </div>
         <nav className="mobile-menu">
           <ul className="primary-menu">
             <li className="active">
               <a href="#">
-                Home
+                Главная
                 <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("demo")}
@@ -36,11 +37,11 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
               </ul>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about">О больнице</Link>
             </li>
             <li>
               <a href="#">
-                Pages
+                Страницы
                 <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("Pages")}
@@ -56,7 +57,7 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
             </li>
             <li>
               <a href="#">
-                Doctors
+                Врачи
                 <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("Doctor")}
@@ -70,7 +71,7 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
             </li>
             <li>
               <a href="#">
-                Blog
+                Блог
                 <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("Blog")}
@@ -82,7 +83,7 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
                 <Blog />
               </ul>
             </li>
-            <li>
+            {/* <li>
               <a href="#">
                 Shop
                 <span
@@ -95,9 +96,9 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
               <ul className="sub-menu" style={activeLi("shop")}>
                 <Shop />
               </ul>
-            </li>
+            </li> */}
             <li className="active">
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">Контакты</Link>
             </li>
           </ul>
         </nav>

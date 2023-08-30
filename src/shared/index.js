@@ -1,0 +1,1 @@
+export { AboutAd } from "./about/ui/about-ad"

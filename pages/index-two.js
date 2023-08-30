@@ -232,10 +232,10 @@ const Index2 = () => {
                     <i className="flaticon-tooth-1" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Medicine Care</Link>
+                    <Link href="/service/1">Medicine Care</Link>
                   </h4>
                   <p>Perspiciatis unde omniste natus error volutatem</p>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       <i className="far fa-plus" />
                     </a>
@@ -251,10 +251,10 @@ const Index2 = () => {
                     <i className="flaticon-tooth-2" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Medicine Care</Link>
+                    <Link href="/service/1">Medicine Care</Link>
                   </h4>
                   <p>Perspiciatis unde omniste natus error volutatem</p>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       <i className="far fa-plus" />
                     </a>
@@ -270,10 +270,10 @@ const Index2 = () => {
                     <i className="flaticon-tooth-3" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Dental Care</Link>
+                    <Link href="/service/1">Dental Care</Link>
                   </h4>
                   <p>Perspiciatis unde omniste natus error volutatem</p>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       <i className="far fa-plus" />
                     </a>
@@ -289,10 +289,10 @@ const Index2 = () => {
                     <i className="flaticon-tooth-4" />
                   </div>
                   <h4 className="title">
-                    <Link href="/service-details">Child Care</Link>
+                    <Link href="/service/1">Child Care</Link>
                   </h4>
                   <p>Perspiciatis unde omniste natus error volutatem</p>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       <i className="far fa-plus" />
                     </a>
@@ -369,7 +369,7 @@ const Index2 = () => {
                   </div>
                   <div className="box-content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Cardiology</a>
                       </Link>
                     </h4>
@@ -377,7 +377,7 @@ const Index2 = () => {
                       Sed ut perspiciats undec omnise vluptate accusantium
                       dolore
                     </p>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -395,13 +395,13 @@ const Index2 = () => {
                   </div>
                   <div className="box-content">
                     <h4 className="title">
-                      <Link href="/service-details">Pulmonary</Link>
+                      <Link href="/service/1">Pulmonary</Link>
                     </h4>
                     <p>
                       Sed ut perspiciats undec omnise vluptate accusantium
                       dolore
                     </p>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -419,7 +419,7 @@ const Index2 = () => {
                   </div>
                   <div className="box-content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Neurology</a>
                       </Link>
                     </h4>
@@ -427,7 +427,7 @@ const Index2 = () => {
                       Sed ut perspiciats undec omnise vluptate accusantium
                       dolore
                     </p>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -445,13 +445,13 @@ const Index2 = () => {
                   </div>
                   <div className="box-content">
                     <h4 className="title">
-                      <Link href="/service-details">Covid - 19</Link>
+                      <Link href="/service/1">Covid - 19</Link>
                     </h4>
                     <p>
                       Sed ut perspiciats undec omnise vluptate accusantium
                       dolore
                     </p>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -469,7 +469,7 @@ const Index2 = () => {
                   </div>
                   <div className="box-content">
                     <h4 className="title">
-                      <Link href="/service-details">
+                      <Link href="/service/1">
                         <a>Orthopedics</a>
                       </Link>
                     </h4>
@@ -477,7 +477,7 @@ const Index2 = () => {
                       Sed ut perspiciats undec omnise vluptate accusantium
                       dolore
                     </p>
-                    <Link href="/service-details">
+                    <Link href="/service/1">
                       <a className="box-btn">
                         Read More <i className="far fa-plus" />
                       </a>
@@ -667,7 +667,7 @@ const Index2 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Lee S. Williamson</a>
                         </Link>
                       </h5>
@@ -710,7 +710,7 @@ const Index2 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">
+                        <Link href="/doctor/1">
                           <a>Greg S. Grinstead </a>
                         </Link>
                       </h5>
@@ -753,7 +753,7 @@ const Index2 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">Roger K. Jackson </Link>
+                        <Link href="/doctor/1">Roger K. Jackson </Link>
                       </h5>
                       <span className="specialty">Orthopedics</span>
                     </div>
@@ -794,7 +794,7 @@ const Index2 = () => {
                     </div>
                     <div className="doctor-information">
                       <h5 className="name">
-                        <Link href="/doctor-details">Ray. M. Drake </Link>
+                        <Link href="/doctor/1">Ray. M. Drake </Link>
                       </h5>
                       <span className="specialty">Cardiology</span>
                     </div>
@@ -1039,7 +1039,7 @@ const Index2 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Comprehensive Was Health Built Complete Guide</a>
                       </Link>
                     </h4>
@@ -1070,7 +1070,7 @@ const Index2 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Why Content Such Fmental Design Process Compre</a>
                       </Link>
                     </h4>
@@ -1101,7 +1101,7 @@ const Index2 = () => {
                       </a>
                     </div>
                     <h4 className="blog-title">
-                      <Link href="/blog-details">
+                      <Link href="/blog/1">
                         <a>Comprehensive Was Health Built Complete Guide</a>
                       </Link>
                     </h4>

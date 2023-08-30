@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import PageBanner from "../src/components/PageBanner";
-import Layouts from "../src/layouts/Layouts";
+import PageBanner from "../../src/components/PageBanner";
+import Layouts from "../../src/layouts/Layouts";
 
 const ServiceTwo = () => {
   return (
     <Layouts footer={2}>
-      <PageBanner title={"Our Services"} pageName="Services" />
+      <PageBanner title={"Платные услуги"} pageName="Платные услуги" />
       <section className="services-area section-gap-top-less bg-color-grey">
         <div className="container">
           <div className="row justify-content-center service-loop">
@@ -16,7 +16,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/heart.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Cardiology</a>
                   </Link>
                 </h4>
@@ -26,7 +26,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -40,7 +40,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/lungs.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Pulmonary</a>
                   </Link>
                 </h4>
@@ -50,7 +50,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -64,7 +64,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/brain.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Neurology</a>
                   </Link>
                 </h4>
@@ -74,7 +74,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -88,7 +88,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/stomach.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Gastroenterology</a>
                   </Link>
                 </h4>
@@ -98,7 +98,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -112,7 +112,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/virus.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Covid - 19</a>
                   </Link>
                 </h4>
@@ -122,7 +122,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -136,7 +136,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/bronchus.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Orthopedics</a>
                   </Link>
                 </h4>
@@ -146,7 +146,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -160,7 +160,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/eye.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Eye Caring</a>
                   </Link>
                 </h4>
@@ -170,7 +170,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -184,7 +184,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/teeth.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Dental Caring</a>
                   </Link>
                 </h4>
@@ -194,7 +194,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -208,7 +208,7 @@ const ServiceTwo = () => {
                   <img src="assets/img/icon/heart-4.png" alt="Icon" />
                 </div>
                 <h4 className="title">
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a>Dental Caring</a>
                   </Link>
                 </h4>
@@ -218,7 +218,7 @@ const ServiceTwo = () => {
                   <span className="link-icon">
                     <i className="far fa-plus"></i>
                   </span>
-                  <Link href="/service-details">
+                  <Link href="/service/1">
                     <a className="box-link">
                       Read More <i className="far fa-plus"></i>
                     </a>
@@ -248,8 +248,8 @@ const ServiceTwo = () => {
           <div className="appointment-form-two">
             <div className="form-wrap">
               <div className="section-heading mb-40">
-                <span className="tagline">Make an Appointment</span>
-                <h2 className="title">Make an Appointment to Doctor Visit</h2>
+                <span className="tagline">Записаться на преим</span>
+                <h2 className="title">Записаться на преим врача</h2>
               </div>
               <form onSubmit={(e) => e.preventDefault()} action="#">
                 <div className="row">

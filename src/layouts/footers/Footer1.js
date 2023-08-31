@@ -115,7 +115,7 @@ const Footer1 = ({ noNewsletters }) => {
                           [0, 1, 2, 3, 4, 5].map((item, index) => {
                             return <div key={index} className="single-image">
                               <img
-                                src="assets/img/instagram/01.jpg"
+                                src="../assets/img/instagram/01.jpg"
                                 alt="Instagram"
                               />
                               <a href="#">

@@ -187,7 +187,7 @@ const Index = () => {
         </section> */}
         {/*====== Appointment Section End ======*/}
         {/*====== Testimonials Section Start ======*/}
-        <section className="testimonial-section bg-color-grey section-have-half-bg">
+        {/* <section className="testimonial-section bg-color-grey section-have-half-bg">
           <div className="container-fluid">
             <div className="row justify-content-end">
               <div className="col-lg-6">
@@ -239,7 +239,7 @@ const Index = () => {
               backgroundImage: "url(assets/img/section-bg/zdrav.png)",
             }}
           />
-        </section>
+        </section> */}
         {/*====== Testimonials Section End ======*/}
         {/*====== Counter Section Start ======*/}
         <section className="counter-section section-gap">
@@ -345,46 +345,21 @@ const Index = () => {
               <h2 className="title">Официальные ресурсы здравоохранения</h2>
             </div>
             <div className="partner-logo-grid grid-border-white">
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/01.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/02.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/03.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/04.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/05.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/06.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/07.png" alt="Partner" />
-                </a>
-              </div>
-              <div className="single-partner">
-                <a href="#">
-                  <img src="assets/img/partner-logos/08.png" alt="Partner" />
-                </a>
-              </div>
+
+              {
+                [0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => {
+                  return (
+                    <div className="single-partner p-5">
+                      <Link href={"/"}>
+                        <a className="text-white font-weight-bold">
+                          Министерство здравоохранения Российской Федерации
+                        </a>
+                      </Link>
+                    </div>
+                  )
+                })
+              }
+
             </div>
           </div>
         </section>

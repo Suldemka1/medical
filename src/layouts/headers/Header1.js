@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { Blog, Doctor, Home, Pages, Services, Shop } from "./Menu";
+import { Blog, Doctor, ForPatient, Home, Pages, Services, Shop } from "./Menu";
 import MobileMenu from "./MobileMenu";
 import SlidePanel from "./SlidePanel";
 
@@ -115,6 +115,14 @@ const Header1 = ({ headerTopbar, position }) => {
                   </ul>
                 </li>
                 <li>
+                  <a href="#">
+                    Для пациента
+                  </a>
+                  <ul className="sub-menu">
+                    <ForPatient />
+                  </ul>
+                </li>
+                <li>
                   <Link href="/doctor">
                     <a>
                       Наши врачи
@@ -128,7 +136,7 @@ const Header1 = ({ headerTopbar, position }) => {
                   </ul> */}
                 </li>
                 <li>
-                  <Link href="blog">
+                  <Link href="/blog">
                     <a>
                       Блог
                       {/* <span className="dd-trigger">

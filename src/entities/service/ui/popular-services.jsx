@@ -7,9 +7,9 @@ const PopularServices = () => {
         <div className="row justify-content-center">
           <div className="col-xl-7 col-lg-8">
             <div className="section-heading text-center mb-40">
-              <span className="tagline">Popular Medical Services</span>
+              <span className="tagline">Популярные медицинские услуги</span>
               <h2 className="title">
-                Benefit For Physical Mental and Virtual Care
+                На страже национального здоровья
               </h2>
             </div>
           </div>

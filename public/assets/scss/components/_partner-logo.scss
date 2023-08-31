@@ -6,6 +6,7 @@
     border-right: none;
     border-bottom: none;
 
+
     .single-partner {
         text-align: center;
         padding: 10px;
@@ -44,6 +45,10 @@
             }
         }
 
+        a {
+            color: $color-white;
+        }
+
         a:hover {
             img {
                 opacity: 1;
@@ -52,6 +57,7 @@
     }
 
     &.grid-border-white {
+
         &,
         .single-partner {
             border-color: rgba(#fff, 0.1);

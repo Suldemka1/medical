@@ -118,7 +118,7 @@ const Header5 = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link href="blog">
+                  <Link href="/blog">
                     <a>
                       Блог
                       <span className="dd-trigger">

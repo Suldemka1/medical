@@ -47,22 +47,25 @@ const AboutAd = () => {
             <div className="about-text">
               <div className="section-heading mb-35">
                 <span className="tagline">Об инфекционной больнице</span>
-                <h2 className="title">All-in-One Worksite Health Solution</h2>
+                <h2 className="title">
+                  Профессионализм Безопасность Репутация
+                </h2>
 
-                <p>25 Years Of Experience in Medical Services</p>
+                <p>20 лет на страже национального здоровья</p>
               </div>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error voluptatem
-                accusantium doloremque laudantium totam rem aperieaque ipsa quae
-                ab illo inventore veritatis et quasi architecto beatae vitae
-                dicta sunt explicabo. Nemo enim ipsam voluptatemsy quia voluptas
-                sit aspernatur aut odit aut fugit quia conquntur magni dolores
-                eos qui ratione voluptatem
+                ГБУЗ РТ «Инфекционная больница» является ведущим
+                специализированным учреждением здравоохранения Республики Тыва,
+                накопившим огромный опыт работы с больными различными
+                инфекционными заболеваниями.
+                <br />
+                <br />
+                Больница укомплектована необходимым штатом врачей, медицинских
+                сестер. Весь врачебный и медсестринский персонал имеют
+                сертификаты по специальности.
               </p>
               <Link href="/about">
-                <a className="template-btn mt-40">
-                  Learn More <i className="far fa-plus"></i>
-                </a>
+                <a className="template-btn mt-40">Подробнее о нас</a>
               </Link>
             </div>
           </div>

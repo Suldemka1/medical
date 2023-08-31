@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 export const Home = () => (
   <Fragment>
@@ -23,7 +23,7 @@ export const Home = () => (
 export const Pages = () => (
   <Fragment>
     <li>
-      <Link href="about">О больнице</Link>
+      <Link href="/about">О больнице</Link>
     </li>
     <li>
       <Link href="/pricing">Платные медицинские услуги</Link>
@@ -39,6 +39,37 @@ export const Pages = () => (
     </li>
   </Fragment>
 );
+export const ForPatient = () => {
+  const [routes, setRoutes] = useState([])
+
+  const getRoutes = async () => {
+    await fetch(`${process.env.api}/api/for-patient-pages?populate[0]=page.title`)
+      .then((res) => res.json())
+      .then((res) => setRoutes(res.data))
+  }
+
+  useEffect(() => {
+    getRoutes()
+  }, [])
+  return (
+    <Fragment>
+      <li>
+        <Link href="/for-patient">Общая информация</Link>
+      </li>
+      {
+        routes?.map((item) => {
+          return (
+            <li>
+              <Link href={`/for-patient/${item.attributes.url}`}>{item.attributes.page.title}</Link>
+            </li>
+          )
+        })
+      }
+    </Fragment>
+  )
+}
+
+
 export const Services = () => (
   <Fragment>
     <li>

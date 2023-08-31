@@ -3,9 +3,8 @@ import React from "react";
 const Footer2 = ({ noNewsletters }) => {
   return (
     <footer
-      className={`template-footer template-footer-white ${
-        noNewsletters ? "" : "have-cta-boxes-two"
-      }`}
+      className={`template-footer template-footer-white ${noNewsletters ? "" : "have-cta-boxes-two"
+        }`}
     >
       {!noNewsletters && (
         <div className="cta-boxes-wrapper">

@@ -69,7 +69,7 @@ const Header5 = () => {
                 <li>
                   <Link href="/">
                     <a>
-                      Home
+                      Главная
                       <span className="dd-trigger">
                         <i className="far fa-plus" />
                       </span>
@@ -80,16 +80,14 @@ const Header5 = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link href="about">About</Link>
-                </li>
-                <li>
                   <a href="#">
-                    Pages
+                    О больнице
                     <span className="dd-trigger">
                       <i className="far fa-plus" />
                     </span>
                   </a>
                   <ul className="sub-menu">
+                    <Pages />
                     <li>
                       <Link href="service">
                         <a>
@@ -103,13 +101,13 @@ const Header5 = () => {
                         <Services />
                       </ul>
                     </li>
-                    <Pages />
+
                   </ul>
                 </li>
                 <li>
                   <Link href="/doctor">
                     <a>
-                      Doctors
+                      Врачи
                       <span className="dd-trigger">
                         <i className="far fa-plus" />
                       </span>
@@ -122,7 +120,7 @@ const Header5 = () => {
                 <li>
                   <Link href="blog">
                     <a>
-                      Blog
+                      Блог
                       <span className="dd-trigger">
                         <i className="far fa-plus" />
                       </span>
@@ -146,7 +144,7 @@ const Header5 = () => {
                   </ul>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  <Link href="/contact">Контакты</Link>
                 </li>
               </ul>
             </nav>

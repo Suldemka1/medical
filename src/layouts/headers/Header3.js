@@ -65,7 +65,7 @@ const Header3 = () => {
                 <li className="active">
                   <Link href="/">
                     <a>
-                      Home
+                      Главная
                       <span className="dd-trigger">
                         <i className="far fa-plus" />
                       </span>

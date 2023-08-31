@@ -17,7 +17,7 @@ const DoctorListMain = () => {
                 className="template-btn template-btn-primary mt-sm-30 wow fadeInRight"
                 data-wow-delay="0.3s"
               >
-                Записаться на преим
+                Записаться на прием
                 {/* <i className="far fa-plus" /> */}
               </a>
             </Link>

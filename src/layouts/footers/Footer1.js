@@ -52,7 +52,7 @@ const Footer1 = ({ noNewsletters }) => {
               <div className="col-lg-3 col-md-8">
                 <div className="widget text-widget">
                   <div className="footer-logo">
-                    <img src="assets/img/logo.png" alt="Medibo" />
+                    <h4 className="text-justify text-break">ГБУЗ РТ &quot;Инфекционная больница&quot;</h4>
                   </div>
                   <p>
                     Sed ut perspi unde omniste natus error sit voluptatem acc
@@ -84,7 +84,7 @@ const Footer1 = ({ noNewsletters }) => {
                 <div className="row">
                   <div className="col-xl-5 col-md-6">
                     <div className="widget nav-widget">
-                      <h4 className="widget-title">Popular Services</h4>
+                      <h4 className="widget-title">Популярные услуги</h4>
                       <ul className="nav-links">
                         <li>
                           <a href="#">Orthopedic Care</a>
@@ -109,62 +109,21 @@ const Footer1 = ({ noNewsletters }) => {
                   </div>
                   <div className="col-xl-7 col-md-6">
                     <div className="widget instagram-widget">
-                      <h4 className="widget-title">Photo Gallery</h4>
+                      <h4 className="widget-title">Галерея</h4>
                       <div className="instagram-images">
-                        <div className="single-image">
-                          <img
-                            src="assets/img/instagram/01.jpg"
-                            alt="Instagram"
-                          />
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
-                        <div className="single-image">
-                          <img
-                            src="assets/img/instagram/02.jpg"
-                            alt="Instagram"
-                          />
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
-                        <div className="single-image">
-                          <img
-                            src="assets/img/instagram/03.jpg"
-                            alt="Instagram"
-                          />
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
-                        <div className="single-image">
-                          <img
-                            src="assets/img/instagram/04.jpg"
-                            alt="Instagram"
-                          />
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
-                        <div className="single-image">
-                          <img
-                            src="assets/img/instagram/05.jpg"
-                            alt="Instagram"
-                          />
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
-                        <div className="single-image">
-                          <img
-                            src="assets/img/instagram/06.jpg"
-                            alt="Instagram"
-                          />
-                          <a href="#">
-                            <i className="fab fa-instagram" />
-                          </a>
-                        </div>
+                        {
+                          [0, 1, 2, 3, 4, 5].map((item, index) => {
+                            return <div key={index} className="single-image">
+                              <img
+                                src="assets/img/instagram/01.jpg"
+                                alt="Instagram"
+                              />
+                              <a href="#">
+                                <i className="fab fa-instagram" />
+                              </a>
+                            </div>
+                          })
+                        }
                       </div>
                     </div>
                   </div>
@@ -172,10 +131,11 @@ const Footer1 = ({ noNewsletters }) => {
               </div>
               <div className="col-lg-3 col-md-10">
                 <div className="widget newsletters-widget">
-                  <h4 className="widget-title">Newsletters</h4>
+                  <h4 className="widget-title">Подписка на новости</h4>
                   <p>
-                    Sed ut perspiciatis unde omniste <br /> natus error sit
-                    voluptatem
+                    Подпишитесь на наши новости
+                    <br />
+                    чтобы быть в курсе последних событий
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
@@ -193,7 +153,7 @@ const Footer1 = ({ noNewsletters }) => {
           </div>
           <div className="copyright-area">
             <p>
-              © 2021 <a href="#">Seeva</a>. All Rights Reserved
+              © 2023 <a href="#">ГБУЗ РТ &quot;Инфекционная больница&quot;</a>. All Rights Reserved
             </p>
           </div>
         </div>

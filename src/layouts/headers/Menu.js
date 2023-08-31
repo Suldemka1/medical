@@ -4,24 +4,27 @@ import { Fragment } from "react";
 export const Home = () => (
   <Fragment>
     <li>
-      <Link href="/">Home One</Link>
+      <Link href="/">Главная вариант 1</Link>
     </li>
     <li>
-      <Link href="/index-two">Home Two</Link>
+      <Link href="/index-two">Главная вариант 2</Link>
     </li>
     <li>
-      <Link href="/index-three">Home Three</Link>
+      <Link href="/index-three">Главная вариант 3</Link>
     </li>
     <li>
-      <Link href="/index-four">Home Four</Link>
+      <Link href="/index-four">Главная вариант 4</Link>
     </li>
     <li>
-      <Link href="/index-five">Home Five</Link>
+      <Link href="/index-five">Главная вариант 5</Link>
     </li>
   </Fragment>
 );
 export const Pages = () => (
   <Fragment>
+    <li>
+      <Link href="about">О больнице</Link>
+    </li>
     <li>
       <Link href="/pricing">Платные медицинские услуги</Link>
     </li>
@@ -39,13 +42,13 @@ export const Pages = () => (
 export const Services = () => (
   <Fragment>
     <li>
-      <Link href="/service">Service One</Link>
+      <Link href="/service">Услуги по ОМС</Link>
     </li>
     <li>
-      <Link href="/service-two">Service Two</Link>
+      <Link href="/service/paid-services">Платные медицинские услуги</Link>
     </li>
     <li>
-      <Link href="/service/1">Service Details</Link>
+      <Link href="/service/1">Пример страницы услуги</Link>
     </li>
   </Fragment>
 );

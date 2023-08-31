@@ -36,12 +36,12 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
                 <Home />
               </ul>
             </li>
-            <li>
+            {/* <li>
               <Link href="/about">О больнице</Link>
-            </li>
+            </li> */}
             <li>
               <a href="#">
-                Страницы
+                О больнице
                 <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("Pages")}
@@ -50,38 +50,37 @@ const MobileMenu = ({ mobileTrigger, setMobileTrigger }) => {
                 </span>
               </a>
               <ul className="sub-menu" style={activeLi("Pages")}>
-                <Services />
-
                 <Pages />
+                <Services />
               </ul>
             </li>
             <li>
               <a href="#">
                 Врачи
-                <span
+                {/* <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("Doctor")}
                 >
                   <i className="fas fa-angle-down" />
-                </span>
+                </span> */}
               </a>
-              <ul className="sub-menu" style={activeLi("Doctor")}>
+              {/* <ul className="sub-menu" style={activeLi("Doctor")}>
                 <Doctor />
-              </ul>
+              </ul> */}
             </li>
             <li>
               <a href="#">
                 Блог
-                <span
+                {/* <span
                   className="dd-trigger"
                   onClick={() => activeMenuSet("Blog")}
                 >
                   <i className="fas fa-angle-down" />
-                </span>
+                </span> */}
               </a>
-              <ul className="sub-menu" style={activeLi("Blog")}>
+              {/* <ul className="sub-menu" style={activeLi("Blog")}>
                 <Blog />
-              </ul>
+              </ul> */}
             </li>
             {/* <li>
               <a href="#">

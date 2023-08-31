@@ -1657,7 +1657,7 @@ button {
 }
 
 .slide-panel .panel-inner {
-	max-width: 380px;
+	max-width: 1200px;
 	height: 100vh;
 	background-color: var(--color-white);
 	padding: 40px;

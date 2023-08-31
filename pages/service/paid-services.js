@@ -248,8 +248,8 @@ const ServiceTwo = () => {
           <div className="appointment-form-two">
             <div className="form-wrap">
               <div className="section-heading mb-40">
-                <span className="tagline">Записаться на преим</span>
-                <h2 className="title">Записаться на преим врача</h2>
+                <span className="tagline">Записаться на прием</span>
+                <h2 className="title">Записаться на прием врача</h2>
               </div>
               <form onSubmit={(e) => e.preventDefault()} action="#">
                 <div className="row">

@@ -90,9 +90,6 @@ const Header1 = ({ headerTopbar, position }) => {
                     <Home />
                   </ul>
                 </li>
-                {/* <li>
-                  <Link href="about">О больнице</Link>
-                </li> */}
                 <li>
                   <a href="#">
                     О больнице
@@ -101,13 +98,7 @@ const Header1 = ({ headerTopbar, position }) => {
                     </span> */}
                   </a>
                   <ul className="sub-menu">
-                    <li>
-                      <Link href="about">
-                        <a>
-                          Краткая характеристика
-                        </a>
-                      </Link>
-                    </li>
+                    <Pages />
                     <li>
                       <Link href="service">
                         <a>
@@ -121,7 +112,6 @@ const Header1 = ({ headerTopbar, position }) => {
                         <Services />
                       </ul>
                     </li>
-                    <Pages />
                   </ul>
                 </li>
                 <li>

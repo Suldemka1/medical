@@ -8,6 +8,7 @@ import { LatestPosts } from "../src/entities/blog";
 import { PopularServices } from "../src/entities/service";
 import { DoctorListMain } from "../src/entities";
 import { AboutAd } from "../src/shared";
+import { Hero } from "../src/pages";
 
 const Counter = dynamic(() => import("../src/components/Counter"), {
   ssr: false,
@@ -18,39 +19,10 @@ const Index = () => {
     <Layouts position={"absolute"}>
       <>
         {/*====== Hero Area Start ======*/}
-        <section className="hero-area-one">
-          <div className="container">
-            <div className="row align-items-center justify-content-center">
-              <div className="col-lg-5 col-md-8">
-                <div className="hero-content">
-                  <h1 className="title wow fadeInDown" data-wow-delay="0.3s">
-                    We Care Medical &amp; Health
-                  </h1>
-                  <p className="wow fadeInLeft" data-wow-delay="0.4s">
-                    Dolor sit amet consectetur adipiscing elitsedes eiusmod
-                    tempor incididunt utlabore Lorem
-                  </p>
-                  <Link href="/contact">
-                    <a
-                      className="template-btn wow fadeInUp"
-                      data-wow-delay="0.5s"
-                    >
-                      Make an Appointment <i className="far fa-plus" />
-                    </a>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-lg-7">
-                <div className="hero-img wow fadeInUp" data-wow-delay="0.3s">
-                  <img src="assets/img/hero-img/hero-img.png" alt="Hero" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Hero />
         {/*====== Hero Area End ======*/}
         {/*====== Why Choose Section Start ======*/}
-        <section className="wcu-section section-gap-top">
+        {/* <section className="wcu-section section-gap-top">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-md-10">
@@ -110,13 +82,12 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/*====== Why Choose Section End ======*/}
 
         {/*====== About Section Start ======*/}
         <AboutAd />
         {/*====== About Section End ======*/}
-        
         {/*====== Service Section Start ======*/}
         <PopularServices />
         {/*====== Service Section End ======*/}
@@ -134,7 +105,7 @@ const Index = () => {
         <DoctorListMain />
         {/*====== Doctor Section End ======*/}
         {/*====== Appointment Section Start ======*/}
-        <section className="appointment-section section-gap-bottom">
+        {/* <section className="appointment-section section-gap-bottom">
           <div className="container">
             <div className="appointment-form-two">
               <div className="form-wrap">
@@ -213,7 +184,7 @@ const Index = () => {
               ></div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/*====== Appointment Section End ======*/}
         {/*====== Testimonials Section Start ======*/}
         <section className="testimonial-section bg-color-grey section-have-half-bg">
@@ -222,103 +193,41 @@ const Index = () => {
               <div className="col-lg-6">
                 <div className="testimonial-one-wrap">
                   <div className="section-heading mb-50">
-                    <span className="tagline">Our Testimonials</span>
+                    <span className="tagline">Приоритет</span>
                     <h2 className="title">
-                      What Our Patients Say About Our Medical
+                      Национальный проект &quot;Здоровье&quot;
                     </h2>
                   </div>
                   <Slider
                     {...testimonialOne}
                     className="testimonial-slider-one"
                   >
-                    <div className="single-testimonial-slider">
-                      <div className="testimonial-inner">
-                        <div className="avatar">
-                          <img
-                            src="assets/img/testimonial/01.png"
-                            alt="Avatar"
-                          />
-                        </div>
-                        <div className="content-wrap">
-                          <p className="testimonial-desc">
-                            Sed ut perspiciatis unde omnis natusy error
-                            voluptatem accusantium doloreue laudan totam rem
-                            aperiam eaquip quae abillo inventore veritatis quasi
-                            architecto beatae vitae dicta sunt explicabo
-                          </p>
-                          <div className="author-info">
-                            <h5 className="name">Mark E. Kaminsky</h5>
-                            <span className="title">Web Designer</span>
+                    {
+                      [0, 1, 2, 3].map((item, index) => {
+                        return (
+                          <div key={index} className="single-testimonial-slider">
+                            <div className="testimonial-inner">
+                              <div className="avatar">
+                                <img
+                                  src="assets/img/testimonial/putin.jpg"
+                                  alt="Avatar"
+                                  className="rounded-lg"
+                                />
+                              </div>
+                              <div className="content-wrap">
+                                <p className="testimonial-desc">
+                                  Сегодня отечественное здравоохранение переживает период кардинальных перемен, связанных с разработкой современных, инновационных технологий, впечатляющими результатами научных исследований, развитием персонализированной медицины
+                                </p>
+                                <div className="author-info">
+                                  <h5 className="name">В.В. Путин</h5>
+                                  <span className="title">Президент РФ</span>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="single-testimonial-slider">
-                      <div className="testimonial-inner">
-                        <div className="avatar">
-                          <img
-                            src="assets/img/testimonial/01.png"
-                            alt="Avatar"
-                          />
-                        </div>
-                        <div className="content-wrap">
-                          <p className="testimonial-desc">
-                            Sed ut perspiciatis unde omnis natusy error
-                            voluptatem accusantium doloreue laudan totam rem
-                            aperiam eaquip quae abillo inventore veritatis quasi
-                            architecto beatae vitae dicta sunt explicabo
-                          </p>
-                          <div className="author-info">
-                            <h5 className="name">Mark E. Kaminsky</h5>
-                            <span className="title">Web Designer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="single-testimonial-slider">
-                      <div className="testimonial-inner">
-                        <div className="avatar">
-                          <img
-                            src="assets/img/testimonial/01.png"
-                            alt="Avatar"
-                          />
-                        </div>
-                        <div className="content-wrap">
-                          <p className="testimonial-desc">
-                            Sed ut perspiciatis unde omnis natusy error
-                            voluptatem accusantium doloreue laudan totam rem
-                            aperiam eaquip quae abillo inventore veritatis quasi
-                            architecto beatae vitae dicta sunt explicabo
-                          </p>
-                          <div className="author-info">
-                            <h5 className="name">Mark E. Kaminsky</h5>
-                            <span className="title">Web Designer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="single-testimonial-slider">
-                      <div className="testimonial-inner">
-                        <div className="avatar">
-                          <img
-                            src="assets/img/testimonial/01.png"
-                            alt="Avatar"
-                          />
-                        </div>
-                        <div className="content-wrap">
-                          <p className="testimonial-desc">
-                            Sed ut perspiciatis unde omnis natusy error
-                            voluptatem accusantium doloreue laudan totam rem
-                            aperiam eaquip quae abillo inventore veritatis quasi
-                            architecto beatae vitae dicta sunt explicabo
-                          </p>
-                          <div className="author-info">
-                            <h5 className="name">Mark E. Kaminsky</h5>
-                            <span className="title">Web Designer</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                        )
+                      })
+                    }
                   </Slider>
                 </div>
               </div>
@@ -327,7 +236,7 @@ const Index = () => {
           <div
             className="section-half-bg"
             style={{
-              backgroundImage: "url(assets/img/section-bg/half-bg-img-01.jpg)",
+              backgroundImage: "url(assets/img/section-bg/zdrav.png)",
             }}
           />
         </section>
@@ -382,7 +291,7 @@ const Index = () => {
         </section>
         {/*====== Counter Section End ======*/}
         {/*====== Help Section Start ======*/}
-        <section className="help-section section-gap-bottom">
+        {/* <section className="help-section section-gap-bottom">
           <div className="container">
             <div className="row justify-content-center justify-content-lg-end align-items-center">
               <div className="col-xl-5 col-lg-6 col-md-8">
@@ -426,14 +335,14 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/*====== Help Section End ======*/}
         {/*====== Partners Section Start ======*/}
         <section className="partner-section section-gap bg-color-secondary section-map-overly">
           <div className="container">
             <div className="section-heading heading-white text-center mb-50">
-              <span className="span tagline">Our Trusted Partners</span>
-              <h2 className="title">We’ve 23563k+ Trusted Partners</h2>
+              <span className="span tagline">Официальные ресурсы здравоохранения</span>
+              <h2 className="title">Официальные ресурсы здравоохранения</h2>
             </div>
             <div className="partner-logo-grid grid-border-white">
               <div className="single-partner">

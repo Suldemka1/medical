@@ -349,7 +349,7 @@ const Index = () => {
               {
                 [0, 1, 2, 3, 4, 5, 6, 7].map((item, index) => {
                   return (
-                    <div className="single-partner p-5">
+                    <div key={index} className="single-partner p-5">
                       <Link href={"/"}>
                         <a className="text-white font-weight-bold">
                           Министерство здравоохранения Российской Федерации

@@ -59,7 +59,7 @@ export const ForPatient = () => {
       {
         routes?.map((item) => {
           return (
-            <li>
+            <li key={item.id}>
               <Link href={`/for-patient/${item.attributes.url}`}>{item.attributes.page.title}</Link>
             </li>
           )

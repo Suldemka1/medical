@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
-  console.log(context.params);
   const page = await fetch(
     `${process.env.api}/api/for-patient-pages?populate=*&filters[url][$eqi]=${id}`,
     {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const PostCard = ({ variant }) => {
+const PostCard = ({ variant, title, content, date }) => {
   const [state, setState] = useState();
 
   useEffect(() => {
@@ -35,24 +35,18 @@ const PostCard = ({ variant }) => {
         <h3 className="post-title">
           <Link href="/blog/1">
             <a>
-              Everything You Need to Know About &amp; How to Deal With Back Pain
-              During.
+              {title}
             </a>
           </Link>
         </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam,
-        </p>
         <ul className="post-meta">
           <li>
             <a href="#">
               <i className="far fa-calendar-alt" />
-              25 Jan 2021
+              {date}
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#">
               <i className="far fa-comments" />
               Com (05)
@@ -63,7 +57,7 @@ const PostCard = ({ variant }) => {
               <i className="far fa-share-alt" />
               (03)
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

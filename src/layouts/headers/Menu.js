@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
+import { useRoutes } from "../../shared/hooks/useRoutes";
 
 export const Home = () => (
   <Fragment>
-    <li>
+    {/* <li>
       <Link href="/">Главная вариант 1</Link>
     </li>
     <li>
@@ -17,12 +18,24 @@ export const Home = () => (
     </li>
     <li>
       <Link href="/index-five">Главная вариант 5</Link>
-    </li>
+    </li> */}
   </Fragment>
 );
-export const Pages = () => (
+
+export const Pages = () => {
+  const routes = useRoutes("about_pages")
+  return (
   <Fragment>
-    <li>
+    {
+        routes?.map((item) => {
+          return (
+            <li key={item.id}>
+              <Link href={`/about/${item.url}`}>{item.title}</Link>
+            </li>
+          )
+        })
+      }
+    {/* <li>
       <Link href="/about">О больнице</Link>
     </li>
     <li>
@@ -36,31 +49,37 @@ export const Pages = () => (
     </li>
     <li>
       <Link href="/appointments">Appointment</Link>
-    </li>
+    </li> */}
   </Fragment>
 );
+} 
+
 export const ForPatient = () => {
-  const [routes, setRoutes] = useState([])
+  const routes = useRoutes("for_patient")
+  // const [routes, setRoutes] = useState([])
 
-  const getRoutes = async () => {
-    await fetch(`${process.env.api}/api/for-patient-pages?populate[0]=page.title`)
-      .then((res) => res.json())
-      .then((res) => setRoutes(res.data))
-  }
+  // const getRoutes = async () => {
+  //   await fetch(`${process.env.api}/items/for_patient`,
+  //     {
+  //       headers: {
+  //         Authorization: `Bearer ${process.env.token}`,
+  //       },
+  //     })
+  //     .then((res) => res.json())
+  //     .then((res) => setRoutes(res.data))
+  // }
 
-  useEffect(() => {
-    getRoutes()
-  }, [])
+  // useEffect(() => {
+  //   getRoutes()
+  // }, [])
+
   return (
     <Fragment>
-      <li>
-        <Link href="/for-patient">Общая информация</Link>
-      </li>
       {
         routes?.map((item) => {
           return (
             <li key={item.id}>
-              <Link href={`/for-patient/${item.attributes.url}`}>{item.attributes.page.title}</Link>
+              <Link href={`/for-patient/${item.url}`}>{item.title}</Link>
             </li>
           )
         })
@@ -70,7 +89,9 @@ export const ForPatient = () => {
 }
 
 
-export const Services = () => (
+export const Services = () => {
+  const routes = useRoutes("about_pages")
+  return (
   <Fragment>
     <li>
       <Link href="/service">Услуги по ОМС</Link>
@@ -83,6 +104,8 @@ export const Services = () => (
     </li>
   </Fragment>
 );
+} 
+
 export const Doctor = () => (
   <Fragment>
     <li>
@@ -93,6 +116,7 @@ export const Doctor = () => (
     </li>
   </Fragment>
 );
+
 export const Blog = () => (
   <Fragment>
     <li>

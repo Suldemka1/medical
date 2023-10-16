@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import PageBanner from "../../src/components/PageBanner";
 import Layouts from "../../src/layouts/Layouts";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import Link from "next/link";
 export const getServerSideProps = async (context) => {
   const { id } = context.params;
   const page = await fetch(
-    `${process.env.api}/api/for-patient-pages?populate=*&filters[url][$eqi]=${id}`,
+    `${process.env.api}/items/for_patient/${id}`,
     {
       headers: {
         Authorization: `Bearer ${process.env.token}`,
@@ -13,91 +14,75 @@ export const getServerSideProps = async (context) => {
     }
   )
     .then((res) => res.json())
-    .then((res) => res.data[0]);
+    .then((res) => res.data)
+
+  const lastPosts = await fetch(`${process.env.api}/items/posts?limit=5`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.token}`,
+      },
+    })
+    .then((res) => res.json())
+    .then((res) => res.data)
 
   return {
     props: {
       page,
+      lastPosts
     },
   };
 };
 
-const ForPatientGeneratedPage = ({ page }) => {
+const ForPatientGeneratedPage = ({ page, lastPosts }) => {
+  useEffect(() => {
+    console.log(page)
+    console.log(lastPosts)
+  }, [])
   return (
     <Layouts>
-      <PageBanner title={page.attributes.page.title} />
+      <PageBanner title={page.title} />
 
       <div className="container">
         <div className="row my-5">
           <div className="col-lg-8">
             <div
               dangerouslySetInnerHTML={{
-                __html: page?.attributes?.page?.content,
+                __html: page?.content,
               }}
             />
           </div>
           <div className="col-lg-4">
             <div className="primary-sidebar">
               <div className="widget latest-post-widget">
-                <h4 className="widget-title">Latest News</h4>
+                <h4 className="widget-title">Последние новости</h4>
                 <div className="latest-post-loop">
-                  <div className="single-post">
-                    <div className="thumbnail">
-                      <img
-                        src="assets/img/blog/post-widget-1.jpg"
-                        alt="Image"
-                      />
-                    </div>
-                    <div className="content">
-                      <h6>
-                        <Link href="/blog/1">
-                          <a>Build Seamless Spreadsheet Import Experience</a>
-                        </Link>
-                      </h6>
-                      <span className="date">
-                        <i className="far fa-calendar-alt" /> 25 May 2021
-                      </span>
-                    </div>
-                  </div>
-                  <div className="single-post">
-                    <div className="thumbnail">
-                      <img
-                        src="assets/img/blog/post-widget-2.jpg"
-                        alt="Image"
-                      />
-                    </div>
-                    <div className="content">
-                      <h6>
-                        <Link href="/blog/1">
-                          <a>Creating Online Environment Work Well Older</a>
-                        </Link>
-                      </h6>
-                      <span className="date">
-                        <i className="far fa-calendar-alt" /> 25 May 2021
-                      </span>
-                    </div>
-                  </div>
-                  <div className="single-post">
-                    <div className="thumbnail">
-                      <img
-                        src="assets/img/blog/post-widget-3.jpg"
-                        alt="Image"
-                      />
-                    </div>
-                    <div className="content">
-                      <h6>
-                        <Link href="/blog/1">
-                          <a>Signs Website Feels More Haunted House</a>
-                        </Link>
-                      </h6>
-                      <span className="date">
-                        <i className="far fa-calendar-alt" /> 25 May 2021
-                      </span>
-                    </div>
-                  </div>
+                  {
+                    lastPosts.map((item) => {
+                      return (
+                        <div className="single-post">
+                          <div className="thumbnail">
+                            <img
+                              src={`${process.env.api}/assets/${item.preview}`}
+                              alt="Image"
+                            />
+                          </div>
+                          <div className="content">
+                            <h6>
+                              <Link href="/blog/1">
+                                <a>{item.title}</a>
+                              </Link>
+                            </h6>
+                            <span className="date">
+                              <i className="far fa-calendar-alt" /> {new Date(item.date_created).toLocaleDateString("ru-RU")}
+                            </span>
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
                 </div>
               </div>
-              <div className="col-xl-5 col-sm-6">
+              {/* <div className="col-xl-5 col-sm-6">
                 <div className="d-flex justify-content-lg-center">
                   <div className="widget nav-widget">
                     <h4 className="widget-title">Popular Services</h4>
@@ -123,9 +108,10 @@ const ForPatientGeneratedPage = ({ page }) => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
+
         </div>
       </div>
     </Layouts>

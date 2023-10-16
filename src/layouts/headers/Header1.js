@@ -81,9 +81,6 @@ const Header1 = ({ headerTopbar, position }) => {
                   <Link href="/">
                     <a>
                       Главная
-                      <span className="dd-trigger">
-                        <i className="far fa-plus" />
-                      </span>
                     </a>
                   </Link>
                   <ul className="sub-menu">

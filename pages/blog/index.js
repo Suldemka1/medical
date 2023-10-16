@@ -5,11 +5,29 @@ import Layouts from "../../src/layouts/Layouts";
 import { getPagination, pagination } from "../../src/utils";
 import { PostCard } from "../../src/entities/blog";
 
-const BlogStandard = () => {
+export const getServerSideProps = async () => {
+  const posts = await fetch(`${process.env.api}/items/posts`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.token}`,
+      },
+    })
+    .then((res) => res.json())
+    .then((res) => res.data)
+
+  return {
+    props: {
+      posts
+    }
+  }
+}
+
+const BlogStandard = ({ posts }) => {
   let sort = 2;
   const [active, setActive] = useState(1);
   const [state, setstate] = useState([]);
   useEffect(() => {
+    console.log(posts)
     pagination(".single-blog-post", sort, active);
     let list = document.querySelectorAll(".single-blog-post");
     setstate(getPagination(list.length, sort));
@@ -23,10 +41,10 @@ const BlogStandard = () => {
             <div className="col-lg-8">
               <div className="blog-loop">
                 {
-                  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => {
+                  posts?.map((item, index) => {
                     if (index % 2 === 0) {
                       return (
-                        <PostCard key={index} variant={"default"} />
+                        <PostCard key={index} author={item.user_created} title={item.title} content={item.content} date={new Date(item.date_created).toLocaleDateString("ru-Ru")} variant={"default"} />
                       )
                     }
                     else if (index % 5 === 0) {
@@ -97,7 +115,7 @@ const BlogStandard = () => {
                     </button>
                   </form>
                 </div>
-                <div className="widget category-widget">
+                {/* <div className="widget category-widget">
                   <h4 className="widget-title">Category</h4>
                   <ul>
                     <li>
@@ -122,7 +140,7 @@ const BlogStandard = () => {
                       <a href="#">Allergic Issue (09)</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="widget latest-post-widget">
                   <h4 className="widget-title">Latest News</h4>
                   <div className="latest-post-loop">

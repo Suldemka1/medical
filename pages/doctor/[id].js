@@ -25,11 +25,11 @@ const DoctorDetails = () => {
                     <h3 className="name">Michael I. Johnson </h3>
                     <span className="specialty">Family Care Specialist</span>
                   </div>
-                  <div>
+                  {/* <div>
                     <a href="#" className="template-btn template-btn-primary">
                       Appointment Now <i className="far fa-plus"></i>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
                 <p>
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -49,12 +49,12 @@ const DoctorDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="row justify-content-center">
+            {/* <div className="row justify-content-center">
               <div className="col-lg-6 col-md-10">
                 <div className="doctor-information">
                   <div className="section-heading mb-30">
-                    <span className="tagline">Educational Information</span>
-                    <h2 className="title">Education & Experience</h2>
+                    <span className="tagline">Информация об образовании</span>
+                    <h2 className="title">Образование и стаж</h2>
                   </div>
 
                   <ul>
@@ -73,7 +73,7 @@ const DoctorDetails = () => {
                       <span className="info-desc">Surgical Critical Care</span>
                     </li>
                     <li>
-                      <span className="info-title">Years of practice</span>
+                      <span className="info-title">Стаж</span>
                       <span className="info-desc">25+</span>
                     </li>
                   </ul>
@@ -117,7 +117,7 @@ const DoctorDetails = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -222,7 +222,7 @@ const DoctorDetails = () => {
       {/* <!--====== Skill Section End ======--> */}
 
       {/* <!--====== Appointment Section Start ======--> */}
-      <section className="appointment-section">
+      {/* <section className="appointment-section">
         <div className="appointment-form-three style-two bg-color-primary">
           <div className="form-wrap">
             <div className="section-heading text-center heading-white mb-60">
@@ -294,11 +294,11 @@ const DoctorDetails = () => {
             style={{ backgroundImage: `url(assets/img/appointment/06.jpg)` }}
           ></div>
         </div>
-      </section>
+      </section> */}
       {/* <!--====== Appointment Section End ======--> */}
 
       {/* <!--====== Service Section Start ======--> */}
-      <section className="services-section section-gap">
+      {/* <section className="services-section section-gap">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-7">
@@ -373,7 +373,7 @@ const DoctorDetails = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/* <!--====== Service Section End ======--> */}
     </Layouts>
   );

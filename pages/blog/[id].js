@@ -2,8 +2,22 @@ import Link from "next/link";
 import React from "react";
 import PageBanner from "../../src/components/PageBanner";
 import Layouts from "../../src/layouts/Layouts";
+import { LatestPostsWidget } from "../../src/widgets/latest-posts-widget";
 
-const BlogDetails = () => {
+export const getServerSideProps = async () => {
+  const latestPosts = await fetch(`${process.env.api}/items/posts?limit=3`)
+    .then((res) => res.json())
+    .then((res) => res.data)
+
+
+  return {
+    props: {
+      latestPosts
+    }
+  }
+}
+
+const BlogDetails = ({latestPosts}) => {
   return (
     <Layouts>
       <PageBanner title={"Заголовок новости"} bgnone />
@@ -299,7 +313,7 @@ const BlogDetails = () => {
                     action="#"
                     className="search-form"
                   >
-                    <input type="search" placeholder="Keywords" />
+                    <input type="search" placeholder="Поиск" />
                     <button type="submit">
                       <i className="far fa-search"></i>
                     </button>
@@ -331,65 +345,7 @@ const BlogDetails = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="widget latest-post-widget">
-                  <h4 className="widget-title">Latest News</h4>
-                  <div className="latest-post-loop">
-                    <div className="single-post">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/blog/post-widget-1.jpg"
-                          alt="Image"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/blog/1">
-                            <a>Build Seamless Spreadsheet Import Experience</a>
-                          </Link>
-                        </h6>
-                        <span className="date">
-                          <i className="far fa-calendar-alt"></i> 25 May 2021
-                        </span>
-                      </div>
-                    </div>
-                    <div className="single-post">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/blog/post-widget-2.jpg"
-                          alt="Image"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/blog/1">
-                            <a>Creating Online Environment Work Well Older</a>
-                          </Link>
-                        </h6>
-                        <span className="date">
-                          <i className="far fa-calendar-alt"></i> 25 May 2021
-                        </span>
-                      </div>
-                    </div>
-                    <div className="single-post">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/blog/post-widget-3.jpg"
-                          alt="Image"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/blog/1">
-                            <a>Signs Website Feels More Haunted House</a>
-                          </Link>
-                        </h6>
-                        <span className="date">
-                          <i className="far fa-calendar-alt"></i> 25 May 2021
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <LatestPostsWidget latestPosts={latestPosts} />
                 <div className="widget cta-widget">
                   <div
                     className="cta-content"

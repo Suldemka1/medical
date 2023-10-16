@@ -10,11 +10,24 @@ import { DoctorListMain } from "../src/entities";
 import { AboutAd } from "../src/shared";
 import { Hero } from "../src/pages";
 
+export const getServerSideProps = async () => {
+  const lastPosts = await fetch(`${process.env.api}/items/posts?limit=3`)
+    .then((res) => res.json())
+    .then((res) => res.data)
+
+
+  return {
+    props: {
+      lastPosts
+    }
+  }
+}
+
 const Counter = dynamic(() => import("../src/components/Counter"), {
   ssr: false,
 });
 
-const Index = () => {
+const Index = ({ lastPosts }) => {
   return (
     <Layouts position={"absolute"}>
       <>
@@ -89,17 +102,17 @@ const Index = () => {
         <AboutAd />
         {/*====== About Section End ======*/}
         {/*====== Service Section Start ======*/}
-        <PopularServices />
+        {/* <PopularServices /> */}
         {/*====== Service Section End ======*/}
         {/*====== Big Tagline Start ======*/}
-        <section className="big-tagline">
+        {/* <section className="big-tagline">
           <div className="container-fluid">
             <h2 className="tagline">
               Learn better health outcomes, improve costs and increase
               productivity for your business
             </h2>
           </div>
-        </section>
+        </section> */}
         {/*====== Big Tagline End ======*/}
         {/*====== Doctor Section Start ======*/}
         <DoctorListMain />
@@ -365,7 +378,7 @@ const Index = () => {
         </section>
         {/*====== Partners Section End ======*/}
         {/*====== Latest Blog Start ======*/}
-        <LatestPosts />
+        <LatestPosts lastPosts={lastPosts} />
         {/*====== Latest Blog End ======*/}
       </>
     </Layouts>

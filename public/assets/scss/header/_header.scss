@@ -52,6 +52,7 @@
 
     .site-logo {
         @include respond-below(xs) {
+
             max-width: 150px;
         }
     }
@@ -74,11 +75,13 @@
 
                 a {
                     padding: 5px;
+
                     font: {
                         size: 16px;
                         weight: 500;
                         family: $font-inter;
                     }
+
                     line-height: 1.4;
                     color: $color-heading;
 
@@ -92,7 +95,7 @@
                     }
                 }
 
-                &:hover > .sub-menu {
+                &:hover>.sub-menu {
                     visibility: visible;
                     opacity: 1;
                     top: 100%;
@@ -179,10 +182,10 @@
         }
 
         &.item-left {
-            ul.primary-menu > li:first-child {
+            ul.primary-menu>li:first-child {
                 padding-left: 0;
 
-                & > a {
+                &>a {
                     padding-left: 0;
                 }
             }
@@ -201,10 +204,12 @@
             border-radius: 30px;
             border: 2px solid rgba(#4d6581, 0.15);
             background-color: $color-white;
+
             font: {
                 size: 15px;
                 weight: 500;
             }
+
             color: $color-heading;
             padding: 0 45px 0 25px;
 
@@ -343,6 +348,7 @@
 
         .off-canvas-btn {
             span {
+
                 &,
                 &::before,
                 &::after {
@@ -630,6 +636,7 @@
                 .social-icons {
                     a {
                         opacity: 0.6;
+
                         &:not(:first-child) {
                             margin-left: 20px;
 
@@ -874,6 +881,7 @@
                 padding: 10px 45px 10px 0;
                 border-bottom: 1px solid $color-primary-10;
                 color: $color-heading;
+
                 font: {
                     size: 16px;
                     weight: 500;
@@ -907,7 +915,7 @@
                 }
             }
 
-            &.active > a {
+            &.active>a {
                 color: $color-secondary;
             }
 

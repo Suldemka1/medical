@@ -4,6 +4,7 @@ import PageBanner from "../../src/components/PageBanner";
 import Layouts from "../../src/layouts/Layouts";
 import { getPagination, pagination } from "../../src/utils";
 import { PostCard } from "../../src/entities/blog";
+import { LatestPostsWidget } from "../../src/widgets/latest-posts-widget";
 
 export const getServerSideProps = async () => {
   const posts = await fetch(`${process.env.api}/items/posts`,
@@ -26,8 +27,9 @@ const BlogStandard = ({ posts }) => {
   let sort = 2;
   const [active, setActive] = useState(1);
   const [state, setstate] = useState([]);
+  const [lastPosts, setLastPosts] = useState([])
   useEffect(() => {
-    console.log(posts)
+    setLastPosts(posts.filter((item, index) => index < 3))
     pagination(".single-blog-post", sort, active);
     let list = document.querySelectorAll(".single-blog-post");
     setstate(getPagination(list.length, sort));
@@ -109,7 +111,7 @@ const BlogStandard = ({ posts }) => {
                     action="#"
                     className="search-form"
                   >
-                    <input type="search" placeholder="Keywords" />
+                    <input type="search" placeholder="Заголовок новости" />
                     <button type="submit">
                       <i className="far fa-search" />
                     </button>
@@ -141,65 +143,7 @@ const BlogStandard = ({ posts }) => {
                     </li>
                   </ul>
                 </div> */}
-                <div className="widget latest-post-widget">
-                  <h4 className="widget-title">Latest News</h4>
-                  <div className="latest-post-loop">
-                    <div className="single-post">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/blog/post-widget-1.jpg"
-                          alt="Image"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/blog/1">
-                            <a>Build Seamless Spreadsheet Import Experience</a>
-                          </Link>
-                        </h6>
-                        <span className="date">
-                          <i className="far fa-calendar-alt" /> 25 May 2021
-                        </span>
-                      </div>
-                    </div>
-                    <div className="single-post">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/blog/post-widget-2.jpg"
-                          alt="Image"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/blog/1">
-                            <a>Creating Online Environment Work Well Older</a>
-                          </Link>
-                        </h6>
-                        <span className="date">
-                          <i className="far fa-calendar-alt" /> 25 May 2021
-                        </span>
-                      </div>
-                    </div>
-                    <div className="single-post">
-                      <div className="thumbnail">
-                        <img
-                          src="assets/img/blog/post-widget-3.jpg"
-                          alt="Image"
-                        />
-                      </div>
-                      <div className="content">
-                        <h6>
-                          <Link href="/blog/1">
-                            <a>Signs Website Feels More Haunted House</a>
-                          </Link>
-                        </h6>
-                        <span className="date">
-                          <i className="far fa-calendar-alt" /> 25 May 2021
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <LatestPostsWidget latestPosts={lastPosts} />
                 <div className="widget cta-widget">
                   <div
                     className="cta-content"

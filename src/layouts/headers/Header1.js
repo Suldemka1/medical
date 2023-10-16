@@ -70,7 +70,7 @@ const Header1 = ({ headerTopbar, position }) => {
           <div className="header-left">
             <div className="site-logo">
               <Link href="/">
-                <h3 className="">ГБУЗ РТ &quot;Инфекционная больница&quot;</h3>
+                <h3 className="" style={{ cursor: "pointer" }}>ГБУЗ РТ &quot;Инфекционная больница&quot;</h3>
 
                 {/* <img src="assets/img/logo.png" alt="Seeva" /> */}
               </Link>

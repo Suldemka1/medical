@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const LatestPosts = () => {
+const LatestPosts = ({ lastPosts }) => {
   return (
     <section className="latest-blog-section section-gap">
       <div className="container">
@@ -13,7 +13,7 @@ const LatestPosts = () => {
           </div>
         </div>
         <div className="row justify-content-center latest-blog-loop">
-          {[0, 1, 2].map((item, index) => {
+          {lastPosts.map((item, index) => {
             return (
               <div key={index} className="col-lg-4 col-md-6 col-sm-10">
                 <div className="latest-blog-one mt-30">
@@ -22,22 +22,25 @@ const LatestPosts = () => {
                   </div>
                   <div className="blog-content">
                     <div className="blog-meta">
-                      <a href="#" className="blog-category">
+                      {/* <a href="#" className="blog-category">
                         Health
-                      </a>
+                      </a> */}
                       <a href="#" className="blog-date">
-                        <i className="far fa-calendar-alt" /> 25 Aug 2021
+                        <i className="far fa-calendar-alt" />
+                        {
+                          new Date(item.date_created).toLocaleDateString()
+                        }
                       </a>
                     </div>
                     <h4 className="blog-title">
                       <Link href="/blog/1">
-                        <a>Comprehensive Worksite Health Program Built</a>
+                        <a>{item.title}</a>
                       </Link>
                     </h4>
                     <div className="btn-area">
                       <Link href="/blog/1">
                         <a className="read-more-btn">
-                          Read More <i className="far fa-plus" />
+                          Читать <i className="far fa-plus" />
                         </a>
                       </Link>
                     </div>

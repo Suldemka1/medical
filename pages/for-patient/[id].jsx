@@ -57,9 +57,9 @@ const ForPatientGeneratedPage = ({ page, lastPosts }) => {
                 <h4 className="widget-title">Последние новости</h4>
                 <div className="latest-post-loop">
                   {
-                    lastPosts.map((item) => {
+                    lastPosts.map((item, index) => {
                       return (
-                        <div className="single-post">
+                        <div key={index} className="single-post">
                           <div className="thumbnail">
                             <img
                               src={`${process.env.api}/assets/${item.preview}`}

@@ -11,30 +11,30 @@ const Footer1 = ({ noNewsletters }) => {
             <div
               className="cta-inner bg-color-secondary bg-size-cover blend-mode-multiply"
               style={{
-                backgroundImage: "url(assets/img/cta-img/cta-boxed-bg-1.jpg)",
+                backgroundImage: "url(/on_map.png)",
               }}
             >
               <div className="row justify-content-center">
                 <div className="col-xl-6 col-lg-8 col-md-10">
                   <div className="cta-content text-center">
                     <div className="section-heading heading-white">
-                      <span className="tagline">Get Free Consultations</span>
+
                       <h2 className="title">
-                        Looking a Doctors to Get Your Services
+                        Инфекционная больница на карте
                       </h2>
                     </div>
                     <ul className="cta-buttons d-flex justify-content-center flex-wrap">
                       <li>
-                        <a href="#" className="template-btn template-btn-white">
-                          Get Free Quote <i className="far fa-plus" />
+                        <a href="https://yandex.ru/maps/11333/kyzyl/?ll=94.435063%2C51.721252&mode=routes&rtext=~51.710119%2C94.430942&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D66900151424&z=12" className="template-btn template-btn-white">
+                          Построить маршрут
                         </a>
                       </li>
                       <li>
                         <a
-                          href="#"
+                          href="https://yandex.ru/maps/11333/kyzyl/?ll=94.435766%2C51.714045&mode=routes&routes%5BavoidTypes%5D=underground%2Crailway&routes%5BtimeDependent%5D%5Btime%5D=2023-10-19T12%3A00%3A00&routes%5BtimeDependent%5D%5Btype%5D=departure&rtext=51.719890%2C94.437990~51.710119%2C94.430942&rtt=mt&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzExNjcxNhI30KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQotGL0LLQsCwg0JrRi9C30YvQuyIKDUDgvEIVK-FOQg%2C%2C~ymapsbm1%3A%2F%2Forg%3Foid%3D66900151424&z=15"
                           className="template-btn template-btn-bordered"
                         >
-                          Get Appointment <i className="far fa-plus" />
+                          Схема проезда
                         </a>
                       </li>
                     </ul>
@@ -49,20 +49,19 @@ const Footer1 = ({ noNewsletters }) => {
         <div className="container">
           <div className="footer-widgets">
             <div className="row">
-              <div className="col-lg-3 col-md-8">
+              <div className="col-lg-5 col-md-8">
                 <div className="widget text-widget">
                   <div className="footer-logo">
                     <h4 className="text-justify text-break">ГБУЗ РТ &quot;Инфекционная больница&quot;</h4>
                   </div>
                   <p>
-                    Sed ut perspi unde omniste natus error sit voluptatem acc
-                    doloremque laudantium
+                    Доступны следующие контактные данные способы связи:
                   </p>
                   <ul className="contact-list">
                     <li>
                       <a href="https://goo.gl/maps/inpkL6wUZqMR3opX7">
                         <i className="far fa-map-marker-alt" />
-                        55 Main Road, USA
+                        ул. Чехова, 65, Кызыл
                       </a>
                     </li>
                     <li>
@@ -74,45 +73,20 @@ const Footer1 = ({ noNewsletters }) => {
                     <li>
                       <a href="tel:01267899">
                         <i className="far fa-phone" />
-                        +012 (345) 678 99
+                        +7 (39422) 6-40-60
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-7">
                 <div className="row">
-                  <div className="col-xl-5 col-md-6">
-                    <div className="widget nav-widget">
-                      <h4 className="widget-title">Популярные услуги</h4>
-                      <ul className="nav-links">
-                        <li>
-                          <a href="#">Orthopedic Care</a>
-                        </li>
-                        <li>
-                          <a href="#">Gynecology Care</a>
-                        </li>
-                        <li>
-                          <a href="#">Cardiology Care</a>
-                        </li>
-                        <li>
-                          <a href="#">Dentistry Care</a>
-                        </li>
-                        <li>
-                          <a href="#">Gastroenterology</a>
-                        </li>
-                        <li>
-                          <a href="#">Urgent Care</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-xl-7 col-md-6">
+                  <div className="col-xl-12 col-md-12">
                     <div className="widget instagram-widget">
                       <h4 className="widget-title">Галерея</h4>
-                      <div className="instagram-images">
+                      <div className="instagram-images justify-content-between">
                         {
-                          [0, 1, 2, 3, 4, 5].map((item, index) => {
+                          [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((item, index) => {
                             return <div key={index} className="single-image">
                               <img
                                 src="../assets/img/instagram/01.jpg"
@@ -127,26 +101,6 @@ const Footer1 = ({ noNewsletters }) => {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-10">
-                <div className="widget newsletters-widget">
-                  <h4 className="widget-title">Подписка на новости</h4>
-                  <p>
-                    Подпишитесь на наши новости
-                    <br />
-                    чтобы быть в курсе последних событий
-                  </p>
-                  <form
-                    onSubmit={(e) => e.preventDefault()}
-                    action="#"
-                    className="newsletters-form"
-                  >
-                    <input type="email" placeholder="Email Address" />
-                    <button type="submit">
-                      <i className="far fa-arrow-right" />
-                    </button>
-                  </form>
                 </div>
               </div>
             </div>

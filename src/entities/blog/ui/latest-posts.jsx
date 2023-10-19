@@ -18,7 +18,13 @@ const LatestPosts = ({ lastPosts }) => {
               <div key={index} className="col-lg-4 col-md-6 col-sm-10">
                 <div className="latest-blog-one mt-30">
                   <div className="blog-thumb">
-                    <img src="assets/img/latest-blog/01.jpg" alt="Thumb" />
+                    <img
+                      src={`${process.env.api}/assets/${item.preview}`}
+                      width={"370"}
+                      height={"494"}
+                      alt="Thumb"
+                      style={{objectFit: "cover"}}
+                    />
                   </div>
                   <div className="blog-content">
                     <div className="blog-meta">
@@ -27,9 +33,7 @@ const LatestPosts = ({ lastPosts }) => {
                       </a> */}
                       <a href="#" className="blog-date">
                         <i className="far fa-calendar-alt" />
-                        {
-                          new Date(item.date_created).toLocaleDateString()
-                        }
+                        {new Date(item.date_created).toLocaleDateString()}
                       </a>
                     </div>
                     <h4 className="blog-title">

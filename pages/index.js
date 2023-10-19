@@ -115,7 +115,7 @@ const Index = ({ lastPosts }) => {
         </section> */}
         {/*====== Big Tagline End ======*/}
         {/*====== Doctor Section Start ======*/}
-        <DoctorListMain />
+        {/* <DoctorListMain /> */}
         {/*====== Doctor Section End ======*/}
         {/*====== Appointment Section Start ======*/}
         {/* <section className="appointment-section section-gap-bottom">
@@ -200,7 +200,7 @@ const Index = ({ lastPosts }) => {
         </section> */}
         {/*====== Appointment Section End ======*/}
         {/*====== Testimonials Section Start ======*/}
-        {/* <section className="testimonial-section bg-color-grey section-have-half-bg">
+        <section className="testimonial-section bg-color-grey section-have-half-bg">
           <div className="container-fluid">
             <div className="row justify-content-end">
               <div className="col-lg-6">
@@ -250,9 +250,12 @@ const Index = ({ lastPosts }) => {
             className="section-half-bg"
             style={{
               backgroundImage: "url(assets/img/section-bg/zdrav.png)",
+              
+              backgroundRepeat: "no-repeat",
+              backgroundColor: "rgb(205, 0, 58)"
             }}
           />
-        </section> */}
+        </section>
         {/*====== Testimonials Section End ======*/}
         {/*====== Counter Section Start ======*/}
         <section className="counter-section section-gap">

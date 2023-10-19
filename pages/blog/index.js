@@ -28,12 +28,14 @@ const BlogStandard = ({ posts }) => {
   const [active, setActive] = useState(1);
   const [state, setstate] = useState([]);
   const [lastPosts, setLastPosts] = useState([])
+
   useEffect(() => {
     setLastPosts(posts.filter((item, index) => index < 3))
     pagination(".single-blog-post", sort, active);
     let list = document.querySelectorAll(".single-blog-post");
     setstate(getPagination(list.length, sort));
   }, [active]);
+
   return (
     <Layouts>
       <PageBanner title={"Новости"} bgnone />
@@ -46,14 +48,14 @@ const BlogStandard = ({ posts }) => {
                   posts?.map((item, index) => {
                     if (index % 2 === 0) {
                       return (
-                        <PostCard key={index} author={item.user_created} title={item.title} content={item.content} date={new Date(item.date_created).toLocaleDateString("ru-Ru")} variant={"default"} />
+                        <PostCard key={index} author={item.user_created} title={item.title} content={item.content} date={new Date(item.date_created).toLocaleDateString("ru-Ru")} preview={item.preview} variant={"default"} />
                       )
                     }
                     else if (index % 5 === 0) {
-                      return <PostCard key={index} variant={"dark"} />
+                      return <PostCard key={index} author={item.user_created} title={item.title} content={item.content} date={new Date(item.date_created).toLocaleDateString("ru-Ru")} preview={item.preview} variant={"dark"} />
                     }
                     else {
-                      return <PostCard key={index} variant={"no-thumbnail"} />
+                      return <PostCard key={index} author={item.user_created} title={item.title} content={item.content} date={new Date(item.date_created).toLocaleDateString("ru-Ru")} preview={item.preview} variant={"no-thumbnail"} />
                     }
                   })
                 }

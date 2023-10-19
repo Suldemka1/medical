@@ -3,83 +3,62 @@ import React from "react";
 import PageBanner from "../../src/components/PageBanner";
 import Layouts from "../../src/layouts/Layouts";
 import { LatestPostsWidget } from "../../src/widgets/latest-posts-widget";
+import Slider from "react-slick";
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (context) => {
+  const { id } = context.query
   const latestPosts = await fetch(`${process.env.api}/items/posts?limit=3`)
     .then((res) => res.json())
     .then((res) => res.data)
 
+  const post = await fetch(`${process.env.api}/items/posts/${id}`)
+    .then((res) => res.json())
+    .then((res) => res.data)
 
   return {
     props: {
+      post,
       latestPosts
     }
   }
 }
 
-const BlogDetails = ({latestPosts}) => {
+const BlogDetails = ({ post, latestPosts }) => {
   return (
     <Layouts>
-      <PageBanner title={"Заголовок новости"} bgnone />
+      <PageBanner title={`Новость №${post.id}`} bgnone />
       <section className="blog-area section-gap">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
               <div className="blog-details-wrapper">
                 <div className="post-thumbnail">
-                  <img src="../assets/img/blog/01.jpg" alt="Image" />
+                  <Slider>
+                    <img src={`${process.env.api}/assets/${post.preview}`} width={700} height={425} alt="Image"
+                      style={{
+                        objectFit: "cover"
+                      }} />
+                      <img src={`${process.env.api}/assets/${post.preview}`} width={700} height={425} alt="Image"
+                      style={{
+                        objectFit: "cover"
+                      }} />
+                  </Slider>
+
                 </div>
                 <div className="blog-details-inner">
                   <div className="post-content">
-                    <a href="#" className="post-author">
-                      <img src="../assets/img/blog/user.png" alt="User" />
-                      Raymond E. Quick
-                    </a>
                     <h3 className="post-title">
                       <Link href="/blog/1">
                         <a>
-                          Everything You Need to Know About & How to Deal With
-                          Back Pain During.
+                          {post?.title}
                         </a>
                       </Link>
                     </h3>
-                    <p>
-                      Amet consectetur adipisicing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip exea commodo consequat. Duis aute irure
-                      dolor rehenderit in voluptate velit esse cillum dolore eu
-                      fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                      non proident, sunt in culpa qui officia deserunt mollit
-                      anim id est laborum. Sed perspiciatis unde omnis iste
-                      natus error sit voluptatem accusantium doloremque
-                      laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                      inventore veritatis et quasi architecto beatae vitae dicta
-                      sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-                      sit aspernatur aut odit aut fugit sed quia consequuntur
-                      magni dolores eos qui ratione voluptatem sequi nesciunt.
-                      Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                      amet, consectetur adipisci velit, sed quia non numquam
-                      eius modi tempora incidunt ut labore et do-magnam aliquam
-                      quaerat voluptate morem ipsum dolor sit amet
-                    </p>
-                    <blockquote>
-                      <p>
-                        Smashing Podcast Episode Pauloag Conversion Optimization
-                        Inspired Design
-                      </p>
-                      <cite>Rasalina Willamson</cite>
-                    </blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident
-                    </p>
+                    <div dangerouslySetInnerHTML={{
+                      __html: post?.content
+                    }} />
                   </div>
+
                   <div className="post-footer">
                     <ul className="related-tags">
                       <li className="title">Tags:</li>
@@ -97,63 +76,20 @@ const BlogDetails = ({latestPosts}) => {
                       <li className="title">Share:</li>
                       <li>
                         <a href="#">
-                          <i className="fab fa-facebook-f"></i>
+                          <i className="fab fa-vk"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fab fa-twitter"></i>
+                          <i className="fab fa-odnoklassniki"></i>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fab fa-instagram"></i>
+                          <i className="fab fa-telegram"></i>
                         </a>
                       </li>
                     </ul>
-                  </div>
-                  <div className="details-line"></div>
-                  <div className="post-author-box">
-                    <div className="author-photo">
-                      <img src="assets/img/blog/post-author.jpg" alt="Image" />
-                    </div>
-                    <div className="author-info">
-                      <h4 className="name">
-                        <a href="#">Rasalina Wilimson</a>
-                      </h4>
-                      <p>
-                        Quis autem eum reprehenderit voluptate esse quam
-                        molestiae consequatu dolorem voluptas nulla pariano
-                        rejects
-                      </p>
-                      <ul className="social-icon">
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-facebook-f"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-twitter"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-instagram"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-behance"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-dribbble"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                   <div className="details-line"></div>
                   <div className="post-navigation">
@@ -190,7 +126,7 @@ const BlogDetails = ({latestPosts}) => {
                       </div>
                     </div>
                   </div>
-                  <div className="details-line"></div>
+                  {/* <div className="details-line"></div>
                   <div className="comment-template">
                     <h4 className="template-title">Peopel Comments</h4>
                     <ul className="comment-list">
@@ -300,7 +236,7 @@ const BlogDetails = ({latestPosts}) => {
                         </div>
                       </form>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -319,7 +255,7 @@ const BlogDetails = ({latestPosts}) => {
                     </button>
                   </form>
                 </div>
-                <div className="widget category-widget">
+                {/* <div className="widget category-widget">
                   <h4 className="widget-title">Category</h4>
                   <ul>
                     <li>
@@ -344,9 +280,10 @@ const BlogDetails = ({latestPosts}) => {
                       <a href="#">Allergic Issue (09)</a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <LatestPostsWidget latestPosts={latestPosts} />
-                <div className="widget cta-widget">
+
+                {/* <div className="widget cta-widget">
                   <div
                     className="cta-content"
                     style={{
@@ -360,9 +297,10 @@ const BlogDetails = ({latestPosts}) => {
                       Get a quote
                     </a>
                   </div>
-                </div>
+                </div> */}
+
                 <div className="widget tag-cloud-widget">
-                  <h4 className="widget-title">Popular Tags</h4>
+                  <h4 className="widget-title">Облако тегов</h4>
                   <ul>
                     <li>
                       <a href="#">Medical</a>
@@ -390,6 +328,7 @@ const BlogDetails = ({latestPosts}) => {
                     </li>
                   </ul>
                 </div>
+
               </div>
             </div>
           </div>

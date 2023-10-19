@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const PostCard = ({ variant, title, content, date }) => {
+const PostCard = ({ variant, title, content, date, preview }) => {
   const [state, setState] = useState();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const PostCard = ({ variant, title, content, date }) => {
   return (
     <div className={`single-blog-post ${state}`}>
       <div className="post-thumbnail">
-        <img src="assets/img/blog/01.jpg" alt="Image" />
+        <img src={`${process.env.api}/assets/${preview}`} alt="Image" />
         <Link href="/blog/1">
           <a className="post-link">
             <i className="fas fa-arrow-right" />
@@ -28,15 +28,9 @@ const PostCard = ({ variant, title, content, date }) => {
         </Link>
       </div>
       <div className="post-content">
-        <a href="#" className="post-author">
-          <img src="assets/img/blog/user.png" alt="User" />
-          Raymond E. Quick
-        </a>
         <h3 className="post-title">
           <Link href="/blog/1">
-            <a>
-              {title}
-            </a>
+            <a>{title}</a>
           </Link>
         </h3>
         <ul className="post-meta">
